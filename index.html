@@ -1,0 +1,2895 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>El Kit del Viajero by Viajes Casal | Accesorios y checklist de viaje</title>
+  <meta name="description" content="Descubre accesorios de viaje recomendados, checklist interactivo, comparador y asistente de compra para preparar viajes de playa, familiares e internacionales.">
+  <meta name="keywords" content="accesorios para viajar, kit de viaje, mochila de viaje, organizadores para maleta, accesorios para avión, maleta de mano, productos para viajeros, qué llevar de viaje">
+  <meta name="author" content="Viajes Casal">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#003F7D">
+
+  <!-- Cambia esta URL cuando publiques el sitio -->
+  <link rel="canonical" href="https://viajescasal-sketch.github.io/elkitdelviajero/">
+
+  <meta property="og:title" content="El Kit del Viajero by Viajes Casal">
+  <meta property="og:description" content="Los accesorios esenciales para viajar cómodo, organizado y seguro.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://viajescasal-sketch.github.io/elkitdelviajero/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=1200&q=85">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="El Kit del Viajero by Viajes Casal">
+  <meta name="twitter:description" content="Accesorios y productos recomendados para tu próximo viaje.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=1200&q=85">
+
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #003F7D;
+      --navy-dark: #002A55;
+      --turquoise: #00B8C8;
+      --turquoise-dark: #008D9A;
+      --coral: #FF6F61;
+      --coral-dark: #E55448;
+      --sand: #F4D7A1;
+      --cream: #FFF9EF;
+      --green: #21A66F;
+      --ink: #153047;
+      --muted: #607286;
+      --white: #FFFFFF;
+      --line: #DCE7EF;
+      --shadow: 0 20px 60px rgba(0, 63, 125, .12);
+      --radius: 26px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a { color: inherit; }
+
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    .container {
+      width: min(1080px, calc(100% - 64px));
+      margin-inline: auto;
+    }
+
+    .content-narrow {
+      width: min(920px, 100%);
+      margin-inline: auto;
+    }
+
+    .announcement {
+      background: var(--navy-dark);
+      color: var(--white);
+      text-align: center;
+      padding: 9px 16px;
+      font-size: .84rem;
+      font-weight: 700;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(255, 255, 255, .92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0, 63, 125, .08);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 900;
+      color: var(--navy);
+      letter-spacing: -.02em;
+    }
+
+    .brand-text,
+    .brand > span:last-child {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .brand small {
+      margin-top: 4px;
+      font-family: "Manrope", Arial, sans-serif;
+      font-size: .58rem;
+      font-weight: 800;
+      letter-spacing: .11em;
+      color: var(--turquoise-dark);
+    }
+
+    footer .brand small {
+      color: var(--turquoise);
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(135deg, var(--turquoise), var(--navy));
+      box-shadow: 0 10px 25px rgba(0, 184, 200, .28);
+      font-size: 1.35rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 700;
+      color: var(--ink);
+      font-size: .94rem;
+    }
+
+    .nav-links a:hover { color: var(--turquoise-dark); }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 22px;
+      text-decoration: none;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: var(--coral);
+      color: var(--white);
+      box-shadow: 0 12px 28px rgba(255, 111, 97, .30);
+    }
+
+    .button-primary:hover { background: var(--coral-dark); }
+
+    .button-secondary {
+      background: var(--white);
+      color: var(--navy);
+      box-shadow: 0 12px 34px rgba(0, 42, 85, .14);
+    }
+
+    .button-outline {
+      border: 2px solid var(--navy);
+      color: var(--navy);
+      background: transparent;
+    }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      min-height: 690px;
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(0,42,85,.94) 0%, rgba(0,63,125,.82) 43%, rgba(0,63,125,.16) 78%),
+        url("https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1900&q=88") center/cover;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: auto -120px -180px auto;
+      width: 460px;
+      height: 460px;
+      border-radius: 50%;
+      background: var(--turquoise);
+      opacity: .20;
+      filter: blur(12px);
+    }
+
+    .hero-content {
+      max-width: 710px;
+      padding: 92px 0 112px;
+      color: white;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .14);
+      border: 1px solid rgba(255, 255, 255, .25);
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      font-family: "Montserrat", sans-serif;
+      line-height: 1.08;
+      margin-top: 0;
+      color: var(--navy-dark);
+    }
+
+    h1 {
+      margin: 22px 0 20px;
+      color: white;
+      font-size: clamp(3rem, 7vw, 5.7rem);
+      letter-spacing: -.055em;
+    }
+
+    .hero p {
+      max-width: 630px;
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      color: rgba(255, 255, 255, .92);
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      margin-top: 34px;
+      color: rgba(255,255,255,.90);
+      font-size: .92rem;
+      font-weight: 700;
+    }
+
+    .trust-row span::before {
+      content: "✓";
+      margin-right: 7px;
+      color: #72F0C0;
+    }
+
+    section { padding: 94px 0; }
+
+    .section-head {
+      max-width: 720px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      color: var(--turquoise-dark);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .78rem;
+      margin-bottom: 12px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 4.4vw, 3.45rem);
+      letter-spacing: -.045em;
+      margin-bottom: 16px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin: 0;
+    }
+
+    .benefits {
+      margin-top: -54px;
+      position: relative;
+      z-index: 5;
+      padding: 0;
+    }
+
+    .benefit-grid {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      overflow: hidden;
+    }
+
+    .benefit {
+      padding: 32px;
+      display: flex;
+      gap: 17px;
+      align-items: flex-start;
+    }
+
+    .benefit + .benefit { border-left: 1px solid var(--line); }
+
+    .benefit-icon {
+      flex: 0 0 48px;
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      font-size: 1.35rem;
+      background: #E8FBFD;
+    }
+
+    .benefit h3 {
+      margin: 3px 0 7px;
+      font-size: 1.03rem;
+    }
+
+    .benefit p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 38px;
+    }
+
+    .filter-btn {
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--navy);
+      border-radius: 999px;
+      padding: 10px 17px;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      color: white;
+      border-color: var(--navy);
+      background: var(--navy);
+    }
+
+
+    .favorites-carousel {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: calc((100% - 20px) / 2);
+      gap: 20px;
+      overflow-x: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 8px 2px 18px;
+    }
+
+    .favorites-carousel::-webkit-scrollbar {
+      height: 9px;
+    }
+
+    .favorites-carousel::-webkit-scrollbar-thumb {
+      background: var(--turquoise);
+      border-radius: 999px;
+    }
+
+    .favorites-carousel .favorite-card {
+      scroll-snap-align: start;
+      width: 100%;
+      min-width: 0;
+    }
+
+    .favorites-carousel-controls {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .favorites-carousel-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--navy);
+      font-size: 1.3rem;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,63,125,.08);
+      transition: transform .2s ease, background .2s ease, color .2s ease;
+    }
+
+    .favorites-carousel-btn:hover {
+      transform: translateY(-2px);
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .favorites-section { background: var(--white); padding: 86px 0 70px; }
+    .favorites-grid { }
+    .favorite-card { display:flex; flex-direction:column; padding:22px; border-radius:22px; background:linear-gradient(180deg,#fff,#f7fcfe); border:1px solid rgba(0,63,125,.10); box-shadow:0 16px 38px rgba(0,63,125,.08); transition:.25s; }
+    .favorite-card:hover { transform:translateY(-6px); box-shadow:0 24px 50px rgba(0,63,125,.14); }
+    .favorite-rank { display:grid; place-items:center; width:42px; height:42px; margin-bottom:16px; border-radius:14px; background:linear-gradient(135deg,var(--turquoise),var(--navy)); color:#fff; font-weight:900; }
+    .favorite-label { color:var(--coral-dark); font-size:.72rem; font-weight:900; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .favorite-card h3 { font-size:1.14rem; margin-bottom:10px; }
+    .favorite-card p { color:var(--muted); font-size:.88rem; margin:0 0 14px; }
+    .favorite-card ul { list-style:none; padding:0; margin:0 0 18px; font-size:.84rem; }
+    .favorite-card li { margin:7px 0; }
+    .favorite-card li::before { content:"✓"; color:var(--green); font-weight:900; margin-right:7px; }
+    .favorite-card .button { width:100%; margin-top:auto; padding-inline:14px; font-size:.82rem; }
+    .selection-criteria { margin-top:34px; padding:28px; border-radius:24px; background:var(--navy-dark); color:#fff; text-align:center; }
+    .selection-criteria h3 { color:#fff; margin-bottom:12px; }
+    .selection-criteria p { max-width:780px; margin:0 auto; color:rgba(255,255,255,.80); }
+
+
+    .category-filters {
+      max-width: 920px;
+      margin-inline: auto;
+    }
+
+    .dynamic-carousel-wrap {
+      position: relative;
+    }
+
+    .dynamic-product-row {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(300px, 340px);
+      gap: 22px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 8px 4px 20px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--turquoise) transparent;
+    }
+
+    .dynamic-product-row::-webkit-scrollbar {
+      height: 9px;
+    }
+
+    .dynamic-product-row::-webkit-scrollbar-thumb {
+      background: var(--turquoise);
+      border-radius: 999px;
+    }
+
+    .dynamic-product-row .product-card {
+      scroll-snap-align: start;
+    }
+
+    .dynamic-product-row .product-card.is-hidden {
+      display: none;
+    }
+
+    .products-section {
+      background:
+        radial-gradient(circle at top right, rgba(0,184,200,.10), transparent 33%),
+        var(--cream);
+    }
+
+    .catalog-stack {
+      display: grid;
+      gap: 52px;
+    }
+
+    .catalog-row {
+      min-width: 0;
+    }
+
+    .catalog-row-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .catalog-row-head h3 {
+      margin: 0;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+    }
+
+    .row-controls {
+      display: flex;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .row-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,63,125,.08);
+      transition: transform .2s ease, background .2s ease, color .2s ease;
+    }
+
+    .row-btn:hover {
+      transform: translateY(-2px);
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .product-row {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(300px, 340px);
+      gap: 22px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 6px 4px 18px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--turquoise) transparent;
+    }
+
+    .product-row::-webkit-scrollbar {
+      height: 9px;
+    }
+
+    .product-row::-webkit-scrollbar-thumb {
+      background: var(--turquoise);
+      border-radius: 999px;
+    }
+
+    .product-row .product-card {
+      scroll-snap-align: start;
+    }
+
+    .products-carousel {
+      position: relative;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(300px, 340px);
+      gap: 24px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 8px 4px 24px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--turquoise) transparent;
+    }
+
+    .product-grid::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    .product-grid::-webkit-scrollbar-thumb {
+      background: var(--turquoise);
+      border-radius: 999px;
+    }
+
+    .product-grid::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .product-card {
+      scroll-snap-align: start;
+    }
+
+    .carousel-controls {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .carousel-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--navy);
+      font-size: 1.35rem;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0,63,125,.10);
+      transition: transform .2s ease, background .2s ease, color .2s ease;
+    }
+
+    .carousel-btn:hover {
+      transform: translateY(-2px);
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border: 1px solid rgba(0,63,125,.08);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 13px 35px rgba(0, 63, 125, .08);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 22px 50px rgba(0, 63, 125, .14);
+    }
+
+    .product-image {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: #EAF4F7;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+
+    .product-card:hover .product-image img { transform: scale(1.05); }
+
+    .badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      color: white;
+      background: var(--green);
+      font-size: .76rem;
+      font-weight: 900;
+      box-shadow: 0 7px 18px rgba(33,166,111,.25);
+    }
+
+    .product-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 23px;
+    }
+
+    .product-category {
+      color: var(--turquoise-dark);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: .72rem;
+    }
+
+    .product-body h3 {
+      font-size: 1.28rem;
+      margin: 8px 0 8px;
+    }
+
+    .rating {
+      color: #F5A524;
+      letter-spacing: 1px;
+      font-size: .9rem;
+      margin-bottom: 8px;
+    }
+
+    .rating-box {
+      margin: 0 0 16px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: #F4FAFC;
+      border: 1px solid #DCEBF0;
+    }
+
+    .rating-box strong {
+      display: block;
+      color: var(--navy-dark);
+      font-size: .88rem;
+      margin-bottom: 3px;
+    }
+
+    .rating-box span {
+      display: block;
+      color: var(--muted);
+      font-size: .78rem;
+      line-height: 1.45;
+    }
+
+    .rating-pending {
+      background: #FFF8EB;
+      border-color: #F2D9A5;
+    }
+
+    .product-body p {
+      color: var(--muted);
+      margin: 0 0 16px;
+      font-size: .93rem;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 21px;
+      color: var(--ink);
+      font-size: .88rem;
+    }
+
+    .features li {
+      margin: 7px 0;
+    }
+
+    .features li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 900;
+      margin-right: 8px;
+    }
+
+    .product-body .button {
+      margin-top: auto;
+      width: 100%;
+    }
+
+    .affiliate-note {
+      margin: 30px auto 0;
+      max-width: 800px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    .kit-section {
+      background: var(--navy-dark);
+      color: white;
+      overflow: hidden;
+    }
+
+    .kit-layout {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 58px;
+      align-items: center;
+    }
+
+    .kit-section h2 { color: white; font-size: clamp(2rem, 4vw, 3.4rem); }
+
+    .kit-section p { color: rgba(255,255,255,.77); }
+
+    .kit-list {
+      display: grid;
+      gap: 13px;
+      margin: 28px 0 32px;
+    }
+
+    .kit-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-weight: 700;
+    }
+
+    .kit-item span {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: rgba(0,184,200,.17);
+      color: #80F5FF;
+    }
+
+    .kit-image {
+      position: relative;
+    }
+
+    .kit-image img {
+      border-radius: 32px;
+      height: 500px;
+      width: 100%;
+      object-fit: cover;
+      box-shadow: 0 30px 90px rgba(0,0,0,.25);
+    }
+
+    .floating-card {
+      position: absolute;
+      left: -32px;
+      bottom: 28px;
+      background: white;
+      color: var(--ink);
+      border-radius: 20px;
+      padding: 17px 20px;
+      box-shadow: var(--shadow);
+      font-weight: 900;
+    }
+
+    .floating-card small {
+      display: block;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .checklist {
+      background:
+        linear-gradient(120deg, rgba(244,215,161,.96), rgba(255,249,239,.95)),
+        url("https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=1600&q=80") center/cover;
+    }
+
+    .checklist-box {
+      max-width: 910px;
+      margin: auto;
+      padding: 56px;
+      border-radius: 32px;
+      background: rgba(255,255,255,.86);
+      backdrop-filter: blur(14px);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .checklist-box h2 {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      margin-bottom: 14px;
+    }
+
+    .checklist-box p {
+      max-width: 670px;
+      margin: 0 auto 27px;
+      color: var(--muted);
+    }
+
+    .email-form {
+      display: flex;
+      gap: 11px;
+      max-width: 620px;
+      margin: auto;
+    }
+
+    .email-form input {
+      flex: 1;
+      min-width: 0;
+      border: 2px solid transparent;
+      border-radius: 999px;
+      padding: 15px 20px;
+      font: inherit;
+      outline: none;
+      box-shadow: inset 0 0 0 1px var(--line);
+    }
+
+    .email-form input:focus {
+      border-color: var(--turquoise);
+    }
+
+    .form-message {
+      margin-top: 13px;
+      min-height: 24px;
+      font-weight: 800;
+      color: var(--green);
+    }
+
+    .faq-grid {
+      max-width: 850px;
+      margin: auto;
+      display: grid;
+      gap: 13px;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 0 21px;
+      background: white;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 20px 0;
+      font-weight: 900;
+      color: var(--navy-dark);
+    }
+
+    details p {
+      padding: 0 0 20px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .final-cta {
+      padding-top: 20px;
+      padding-bottom: 100px;
+    }
+
+    .cta-box {
+      background:
+        linear-gradient(115deg, rgba(0,63,125,.96), rgba(0,184,200,.82)),
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=85") center/cover;
+      border-radius: 34px;
+      padding: 62px;
+      color: white;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box h2 {
+      color: white;
+      font-size: clamp(2rem, 4vw, 3.35rem);
+      margin-bottom: 15px;
+    }
+
+    .cta-box p {
+      max-width: 640px;
+      margin: 0 auto 28px;
+      color: rgba(255,255,255,.88);
+    }
+
+    footer {
+      background: #031F3B;
+      color: rgba(255,255,255,.73);
+      padding: 56px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr .7fr;
+      gap: 40px;
+      padding-bottom: 38px;
+    }
+
+    footer .brand { color: white; margin-bottom: 15px; }
+
+    footer h3 {
+      color: white;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    footer a {
+      display: block;
+      color: rgba(255,255,255,.73);
+      text-decoration: none;
+      margin: 8px 0;
+    }
+
+    footer a:hover { color: #80F5FF; }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.12);
+      padding-top: 22px;
+      font-size: .82rem;
+      text-align: center;
+    }
+
+    .hidden { display: none !important; }
+
+    @media (max-width: 960px) {
+      .nav-links a:not(.button) { display: none; }
+      .favorites-grid { }
+      .kit-layout { grid-template-columns: 1fr; }
+      .kit-image { max-width: 650px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid > div:first-child { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 720px) {
+      .category-filters {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 8px;
+        scrollbar-width: none;
+      }
+
+      .category-filters::-webkit-scrollbar {
+        display: none;
+      }
+
+      .category-filters .filter-btn {
+        flex: 0 0 auto;
+      }
+
+      .dynamic-product-row {
+        grid-auto-columns: 86%;
+        gap: 14px;
+      }
+
+      .favorites-carousel {
+        grid-auto-columns: 100%;
+        gap: 14px;
+      }
+      .container {
+        width: min(100% - 28px, 1080px);
+      }
+
+      .announcement { font-size: .74rem; }
+      .nav { min-height: 66px; }
+      .brand-text { font-size: .9rem; }
+      .nav .button { display: none; }
+      .hero { min-height: 660px; background-position: 62% center; }
+      .hero-content { padding: 74px 0 105px; }
+      .hero-actions .button { width: 100%; }
+      .catalog-row-head {
+        align-items: flex-end;
+      }
+      .catalog-row-head h3 {
+        max-width: 70%;
+      }
+      .trust-row { gap: 10px 18px; }
+      section { padding: 72px 0; }
+      .benefit-grid { grid-template-columns: 1fr; }
+      .favorites-grid { }
+      .benefit + .benefit {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+      .kit-image img { height: 390px; }
+      .floating-card { left: 16px; bottom: 16px; }
+      .checklist-box, .cta-box { padding: 38px 22px; }
+      .email-form { flex-direction: column; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-grid > div:first-child { grid-column: auto; }
+    }
+  
+    /* Ajustes definitivos de carruseles */
+    .favorites-slider-shell,
+    .dynamic-carousel-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .favorites-slider,
+    .dynamic-product-row {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: calc((100% - 44px) / 3);
+      gap: 22px;
+      overflow-x: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 8px 2px 20px;
+    }
+
+    .favorites-slider .favorite-card,
+    .dynamic-product-row .product-card {
+      width: 100%;
+      min-width: 0;
+      scroll-snap-align: start;
+    }
+
+    .favorite-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .favorite-image {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: #eaf4f7;
+    }
+
+    .favorite-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .favorite-rank {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      margin: 0;
+    }
+
+    .favorite-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 20px;
+    }
+
+    .favorite-content .button {
+      margin-top: auto;
+    }
+
+    .favorites-slider-controls {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .dynamic-product-row .product-card.is-hidden {
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+      .favorites-slider,
+      .dynamic-product-row {
+        grid-auto-columns: calc((100% - 18px) / 2);
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .favorites-slider,
+      .dynamic-product-row {
+        grid-auto-columns: 88%;
+        gap: 14px;
+      }
+
+      .category-filters {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 10px;
+      }
+
+      .category-filters .filter-btn {
+        flex: 0 0 auto;
+      }
+    }
+
+  
+    .favorite-rank {
+      background: linear-gradient(135deg, #E2C26B, #B98A24) !important;
+      color: #1A2430 !important;
+      box-shadow: 0 10px 24px rgba(185,138,36,.28) !important;
+    }
+
+  
+    .interactive-checklist {
+      background:
+        radial-gradient(circle at top left, rgba(0,184,200,.10), transparent 30%),
+        var(--white);
+    }
+
+    .checklist-panel {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 34px;
+      border-radius: 28px;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .trip-type-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .trip-type-btn {
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--navy);
+      border-radius: 999px;
+      padding: 10px 16px;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .trip-type-btn.active,
+    .trip-type-btn:hover {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+
+    .checklist-progress {
+      margin-bottom: 24px;
+    }
+
+    .progress-copy {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 9px;
+      font-weight: 800;
+      color: var(--navy-dark);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 12px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #DDEAF0;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--turquoise), var(--navy));
+      transition: width .25s ease;
+    }
+
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 12px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 14px;
+      border-radius: 16px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      cursor: pointer;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .check-item:hover {
+      transform: translateY(-2px);
+      border-color: var(--turquoise);
+    }
+
+    .check-item input {
+      margin-top: 4px;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--turquoise-dark);
+    }
+
+    .check-item span {
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .checklist-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .checklist-note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    @media (max-width: 900px) {
+      .checklist-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+
+    @media (max-width: 620px) {
+      .checklist-panel {
+        padding: 24px 18px;
+      }
+
+      .checklist-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trip-type-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 8px;
+      }
+
+      .trip-type-btn {
+        flex: 0 0 auto;
+      }
+
+      .checklist-actions .button {
+        width: 100%;
+      }
+    }
+
+  
+    /* Deslizamiento táctil para carruseles */
+    .favorites-slider,
+    .dynamic-product-row,
+    .product-row,
+    .product-grid {
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+      touch-action: pan-x;
+      overscroll-behavior-inline: contain;
+      cursor: grab;
+      scrollbar-width: thin;
+    }
+
+    .favorites-slider:active,
+    .dynamic-product-row:active,
+    .product-row:active,
+    .product-grid:active {
+      cursor: grabbing;
+    }
+
+
+    .smart-compare {
+      background:
+        radial-gradient(circle at top right, rgba(0,184,200,.10), transparent 32%),
+        var(--cream);
+    }
+
+    .compare-panel {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 34px;
+      border-radius: 28px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .compare-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .compare-tab {
+      border: 1px solid var(--line);
+      background: var(--cream);
+      color: var(--navy);
+      border-radius: 999px;
+      padding: 11px 17px;
+      font: inherit;
+      font-weight: 900;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .compare-tab.active,
+    .compare-tab:hover {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+
+    .compare-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .compare-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      overflow: hidden;
+      border-radius: 22px;
+      background: linear-gradient(180deg, #fff, #f7fcfe);
+      border: 1px solid rgba(0,63,125,.12);
+      box-shadow: 0 16px 38px rgba(0,63,125,.08);
+    }
+
+    .compare-card.is-winner {
+      border: 2px solid #C9A227;
+      box-shadow: 0 20px 46px rgba(185,138,36,.18);
+    }
+
+    .compare-image {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: #eaf4f7;
+    }
+
+    .compare-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .compare-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: #C9A227;
+      color: #182231;
+      font-size: .72rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .compare-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 22px;
+    }
+
+    .compare-body h3 {
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+    }
+
+    .compare-body > p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .compare-score {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .compare-score-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed var(--line);
+      font-size: .86rem;
+    }
+
+    .compare-score-row strong {
+      color: var(--navy-dark);
+    }
+
+    .compare-value {
+      font-weight: 900;
+      color: var(--turquoise-dark);
+      text-align: right;
+    }
+
+    .compare-body .button {
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .compare-note {
+      margin-top: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .84rem;
+    }
+
+    @media (max-width: 900px) {
+      .compare-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 620px) {
+      .compare-panel {
+        padding: 24px 18px;
+      }
+
+      .compare-tabs {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 8px;
+      }
+
+      .compare-tabs::-webkit-scrollbar {
+        display: none;
+      }
+
+      .compare-tab {
+        flex: 0 0 auto;
+      }
+
+      .compare-grid {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 88%;
+        gap: 14px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x;
+        padding-bottom: 10px;
+      }
+
+      .compare-card {
+        scroll-snap-align: start;
+      }
+    }
+
+  
+.favorite-rank,.compare-badge,.badge,.gold-badge,.assistant-result-badge{color:#fff!important}
+.favorites-slider,.dynamic-product-row,.product-row,.product-grid{overflow-x:auto!important;-webkit-overflow-scrolling:touch;touch-action:auto!important;overscroll-behavior:auto!important}
+.shopping-assistant{background:var(--white)}
+.assistant-panel{max-width:980px;margin:auto;padding:36px;border-radius:30px;background:var(--cream);border:1px solid var(--line);box-shadow:var(--shadow)}
+.assistant-progress{display:flex;gap:10px;margin-bottom:28px}
+.assistant-progress-step{flex:1;height:8px;border-radius:999px;background:#dce8ed}
+.assistant-progress-step.active{background:linear-gradient(90deg,var(--turquoise),var(--navy))}
+.assistant-step{display:none}.assistant-step.active{display:block}
+.assistant-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.assistant-option{min-height:110px;padding:18px;border-radius:18px;border:1px solid var(--line);background:#fff;color:var(--navy-dark);font:inherit;font-weight:900;cursor:pointer}
+.assistant-option.selected,.assistant-option:hover{border-color:var(--turquoise);background:#effbfd}
+.assistant-nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px}
+.assistant-result{display:none;margin-top:30px}.assistant-result.visible{display:block}
+.assistant-result-card{padding:28px;border-radius:24px;background:var(--navy-dark);color:#fff}
+.assistant-result-card h3{color:#fff}.assistant-result-card>p{color:rgba(255,255,255,.78)}
+.assistant-result-badge{display:inline-flex;padding:8px 12px;border-radius:999px;background:#c9a227;font-size:.74rem;font-weight:900;text-transform:uppercase}
+.assistant-score{display:flex;align-items:center;gap:14px;margin:20px 0}.assistant-score-number{font-size:2.5rem;font-weight:900;color:#f5d675}
+.assistant-products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.assistant-product{display:flex;flex-direction:column;padding:18px;border-radius:18px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14)}
+.assistant-product strong{color:#fff;margin-bottom:8px}.assistant-product span{color:rgba(255,255,255,.75);font-size:.86rem;margin-bottom:14px}
+.assistant-product .button{margin-top:auto;width:100%}
+@media(max-width:900px){.assistant-options,.assistant-products{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.assistant-panel{padding:24px 18px}.assistant-options,.assistant-products{grid-template-columns:1fr}.assistant-nav{flex-direction:column-reverse}.assistant-nav .button{width:100%}}
+
+
+.social-section{background:#071c2d;padding:64px 0;color:#fff}
+.social-section .section-head h2{color:#fff}
+.social-section .section-head p{color:rgba(255,255,255,.72)}
+.social-grid{display:flex;justify-content:center;flex-wrap:wrap;gap:16px}
+.social-icon-link{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.10);color:#fff;border:1px solid rgba(255,255,255,.16);transition:transform .2s ease,background .2s ease}
+.social-icon-link:hover{transform:translateY(-4px) scale(1.04);background:var(--turquoise)}
+.social-icon-link svg{width:26px;height:26px;fill:currentColor}
+.whatsapp-quote-float{position:fixed;right:22px;bottom:22px;z-index:80;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 16px 38px rgba(0,0,0,.24);transition:transform .2s ease}
+.whatsapp-quote-float:hover{transform:translateY(-4px) scale(1.04)}
+.whatsapp-quote-float svg{width:31px;height:31px;fill:currentColor}
+@media(max-width:620px){.social-icon-link{width:52px;height:52px}.whatsapp-quote-float{right:16px;bottom:16px;width:58px;height:58px}}
+
+</style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "El Kit del Viajero by Viajes Casal",
+    "description": "Selección de accesorios de viaje recomendados por Viajes Casal.",
+    "itemListOrder": "https://schema.org/ItemListOrderAscending",
+    "numberOfItems": 9
+  }
+  </script>
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#003F7D">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
+
+  <!-- Google Analytics 4: sustituye G-XXXXXXXXXX -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-XXXXXXXXXX", { anonymize_ip: true });
+  </script>
+
+  <!-- Microsoft Clarity: sustituye CLARITY_PROJECT_ID -->
+  <script>
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window,document,"clarity","script","CLARITY_PROJECT_ID");
+  </script>
+
+  <!-- Meta Pixel: sustituye META_PIXEL_ID -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,"script","https://connect.facebook.net/en_US/fbevents.js");
+    fbq("init","META_PIXEL_ID");fbq("track","PageView");
+  </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://viajescasal-sketch.github.io/elkitdelviajero/#organization",
+      "name": "Viajes Casal",
+      "url": "https://viajescasal-sketch.github.io/planeatuviaje/",
+      "sameAs": [
+        "https://www.facebook.com/share/1GjFtGYqvk/",
+        "https://www.tiktok.com/@viajes_bumeran_casal?_r=1&_t=ZS-97tnwvvVyF8",
+        "https://www.instagram.com/viaja.pau?igsh=bWZzeGphM2JveHV0&utm_source=qr",
+        "https://youtube.com/@inspirateaviajar?si=x4N2enDjoUBr3QF_"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+52-998-392-1530",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "es"
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://viajescasal-sketch.github.io/elkitdelviajero/#website",
+      "url": "https://viajescasal-sketch.github.io/elkitdelviajero/",
+      "name": "El Kit del Viajero by Viajes Casal",
+      "publisher": {
+        "@id": "https://viajescasal-sketch.github.io/elkitdelviajero/#organization"
+      },
+      "inLanguage": "es-MX"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://viajescasal-sketch.github.io/elkitdelviajero/#webpage",
+      "url": "https://viajescasal-sketch.github.io/elkitdelviajero/",
+      "name": "El Kit del Viajero by Viajes Casal",
+      "isPartOf": {
+        "@id": "https://viajescasal-sketch.github.io/elkitdelviajero/#website"
+      },
+      "about": {
+        "@id": "https://viajescasal-sketch.github.io/elkitdelviajero/#organization"
+      },
+      "description": "Accesorios, checklist y herramientas para preparar viajes.",
+      "inLanguage": "es-MX"
+    }
+  ]
+}
+  </script>
+</head>
+
+<body>
+  <div class="announcement">
+    ✈️ Recomendaciones para viajar mejor, seleccionadas por Viajes Casal
+  </div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="El Kit del Viajero by Viajes Casal">
+        <span class="brand-mark">✈</span>
+        <span class="brand-text">EL KIT DEL VIAJERO <small>BY VIAJES CASAL</small></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#productos">Productos</a>
+        <a href="#checklist">Checklist</a>
+        <a href="#preguntas">Preguntas</a>
+        <!-- REEMPLAZA esta URL por tu enlace real de WhatsApp o formulario -->
+        <a class="button button-primary" href="https://wa.me/5210000000000?text=Hola%20Viajes%20Casal,%20quiero%20cotizar%20mi%20próximo%20viaje" target="_blank" rel="noopener">Cotizar viaje</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">🎒 Guía recomendada por expertos</span>
+          <h1>Tu próximo viaje comienza aquí.</h1>
+          <p>Descubre accesorios esenciales para viajar cómodo, organizado y seguro. Una selección práctica para vacaciones, vuelos largos y aventuras internacionales.</p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#productos">🛒 Ver productos recomendados</a>
+            <a class="button button-secondary" href="https://wa.me/5210000000000?text=Hola%20Viajes%20Casal,%20quiero%20cotizar%20mi%20próximo%20viaje" target="_blank" rel="noopener">✈️ Cotizar mi viaje</a>
+          </div>
+
+          <div class="trust-row">
+            <span>Selección práctica</span>
+            <span>Compras en Mercado Libre</span>
+            <span>Para todo tipo de viaje</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <div class="benefit-grid">
+          <article class="benefit">
+            <div class="benefit-icon">🎒</div>
+            <div>
+              <h3>Productos útiles</h3>
+              <p>Accesorios pensados para resolver necesidades reales antes y durante el viaje.</p>
+            </div>
+          </article>
+          <article class="benefit">
+            <div class="benefit-icon">⭐</div>
+            <div>
+              <h3>Selección cuidadosa</h3>
+              <p>Priorizamos funcionalidad, buenas valoraciones y relación calidad-precio.</p>
+            </div>
+          </article>
+          <article class="benefit">
+            <div class="benefit-icon">🔒</div>
+            <div>
+              <h3>Compra externa segura</h3>
+              <p>La disponibilidad, el pago, el envío y la garantía se gestionan en Mercado Libre.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="favorites-section" id="favoritos">
+      <div class="container">
+        <header class="section-head">
+          <span class="section-kicker">Selección editorial</span>
+          <h2>Los Favoritos de Viajes Casal</h2>
+          <p>Los cinco accesorios que ofrecen mayor utilidad para la mayoría de los viajeros.</p>
+        </header>
+
+        <div class="favorites-slider-shell">
+          <div class="favorites-slider" id="favoritesCarousel">
+            <article class="favorite-card">
+              <div class="favorite-image">
+                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=82" alt="Mochila de cabina recomendada" loading="lazy" decoding="async">
+                <span class="favorite-rank">#1</span>
+              </div>
+              <div class="favorite-content">
+                <div class="favorite-label">Imprescindible</div>
+                <h3>Mochila de cabina 40 L</h3>
+                <p>Ideal para viajes cortos, trabajo y escapadas sin documentar equipaje.</p>
+                <ul><li>Ahorra tiempo en aeropuerto</li><li>Protege laptop y documentos</li><li>Versátil para distintos viajes</li></ul>
+                <a class="button button-primary affiliate-link" data-product="mochila" href="#" target="_blank" rel="sponsored noopener">Ver en Mercado Libre</a>
+              </div>
+            </article>
+
+            <article class="favorite-card">
+              <div class="favorite-image">
+                <img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=900&q=82" alt="Power bank recomendado para viajar" loading="lazy" decoding="async">
+                <span class="favorite-rank">#2</span>
+              </div>
+              <div class="favorite-content">
+                <div class="favorite-label">Más recomendado</div>
+                <h3>Power bank</h3>
+                <p>Mantén activo el celular donde llevas mapas, boletos y reservaciones.</p>
+                <ul><li>Útil en trayectos largos</li><li>Evita quedarte sin batería</li><li>Funciona para cualquier destino</li></ul>
+                <a class="button button-primary affiliate-link" data-product="powerbank" href="#" target="_blank" rel="sponsored noopener">Ver en Mercado Libre</a>
+              </div>
+            </article>
+
+            <article class="favorite-card">
+              <div class="favorite-image">
+                <img src="https://images.unsplash.com/photo-1581553680321-4fffae59fccd?auto=format&fit=crop&w=900&q=82" alt="Organizadores para maleta recomendados" loading="lazy" decoding="async">
+                <span class="favorite-rank">#3</span>
+              </div>
+              <div class="favorite-content">
+                <div class="favorite-label">Mejor valor</div>
+                <h3>Organizadores de maleta</h3>
+                <p>Mejoran el orden, el espacio disponible y la experiencia al empacar.</p>
+                <ul><li>Excelente costo-utilidad</li><li>Ideal para familias y parejas</li><li>Facilita desempacar</li></ul>
+                <a class="button button-primary affiliate-link" data-product="organizadores" href="#" target="_blank" rel="sponsored noopener">Ver en Mercado Libre</a>
+              </div>
+            </article>
+
+            <article class="favorite-card">
+              <div class="favorite-image">
+                <img src="https://images.unsplash.com/photo-1620288650879-20db0eb38c05?auto=format&fit=crop&w=900&q=82" alt="Adaptador universal recomendado" loading="lazy" decoding="async">
+                <span class="favorite-rank">#4</span>
+              </div>
+              <div class="favorite-content">
+                <div class="favorite-label">No puede faltar</div>
+                <h3>Adaptador universal</h3>
+                <p>Evita problemas al conectar dispositivos durante viajes internacionales.</p>
+                <ul><li>Clave para Europa y Asia</li><li>Compacto y reutilizable</li><li>Reduce imprevistos</li></ul>
+                <a class="button button-primary affiliate-link" data-product="adaptador" href="#" target="_blank" rel="sponsored noopener">Ver en Mercado Libre</a>
+              </div>
+            </article>
+
+            <article class="favorite-card">
+              <div class="favorite-image">
+                <img src="https://images.unsplash.com/photo-1520452112805-c6692c840af0?auto=format&fit=crop&w=900&q=82" alt="Almohada cervical recomendada para vuelos largos" loading="lazy" decoding="async">
+                <span class="favorite-rank">#5</span>
+              </div>
+              <div class="favorite-content">
+                <div class="favorite-label">Para vuelos largos</div>
+                <h3>Almohada cervical</h3>
+                <p>Mejora la comodidad durante vuelos, autobús o viajes por carretera.</p>
+                <ul><li>Mejora el descanso</li><li>Reduce molestias cervicales</li><li>Fácil de transportar</li></ul>
+                <a class="button button-primary affiliate-link" data-product="almohada" href="#" target="_blank" rel="sponsored noopener">Ver en Mercado Libre</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="favorites-slider-controls">
+            <button class="favorites-carousel-btn" id="favoritesPrev" type="button" aria-label="Ver favoritos anteriores">←</button>
+            <button class="favorites-carousel-btn" id="favoritesNext" type="button" aria-label="Ver favoritos siguientes">→</button>
+          </div>
+        </div>
+
+        <div class="selection-criteria">
+          <h3>¿Cómo seleccionamos nuestros favoritos?</h3>
+          <p>Consideramos utilidad real, relación calidad-precio, facilidad de transporte, valoraciones disponibles y necesidades frecuentes del viajero.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-section" id="productos">
+      <div class="container">
+        <header class="section-head">
+          <span class="section-kicker">Explora por categoría</span>
+          <h2>Encuentra lo que necesitas más rápido</h2>
+          <p>Selecciona una categoría y descubre los productos más útiles para ese tipo de viaje.</p>
+        </header>
+
+        <div class="filters category-filters" aria-label="Filtrar productos por categoría">
+          <button class="filter-btn active" data-category-filter="all">⭐ Todos</button>
+          <button class="filter-btn" data-category-filter="equipaje">🎒 Equipaje</button>
+          <button class="filter-btn" data-category-filter="tecnologia">🔋 Tecnología</button>
+          <button class="filter-btn" data-category-filter="internacional">🌍 Internacional</button>
+          <button class="filter-btn" data-category-filter="familia">👨‍👩‍👧 Familia</button>
+          <button class="filter-btn" data-category-filter="playa">🏖 Playa</button>
+          <button class="filter-btn" data-category-filter="invierno">❄️ Invierno</button>
+          <button class="filter-btn" data-category-filter="imprescindibles">✈️ Imprescindibles</button>
+        </div>
+
+        <div class="dynamic-carousel-wrap">
+          <div class="product-row dynamic-product-row" id="dynamicProductCarousel">
+            <article class="product-card" data-tags="equipaje internacional playa invierno imprescindibles" data-category="equipaje">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=82" alt="Mochila de viaje para equipaje de mano" loading="lazy" decoding="async">
+              <span class="badge">Más recomendado</span>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Equipaje</span>
+              <h3>Mochila de cabina 40 L</h3>
+              <div class="rating" aria-label="Calificación externa 4.6 de 5">★★★★☆ 4.6/5</div>
+              <div class="rating-box">
+                <strong>Calificación de referencia en internet</strong>
+                <span>Mochila de cabina comparable, valorada con 4.6/5. La nota exacta debe revisarse en la publicación final de Mercado Libre.</span>
+              </div>
+              <p><strong>Problema que resuelve:</strong> evita documentar equipaje en viajes cortos y te ayuda a llevar todo de forma práctica.</p>
+              <ul class="features">
+                <li>Ideal para escapadas y viajes de negocios</li>
+                <li>Compartimento para laptop y documentos</li>
+                <li>Buena opción para equipaje de mano</li>
+              </ul>
+              <p><strong>Recomendado para:</strong> viajes nacionales, internacionales y trabajo.</p>
+              <p><strong>¿Por qué lo elegimos?</strong> Es versátil, compacta y cubre la mayoría de las necesidades de un viajero frecuente.</p>
+              <a class="button button-primary affiliate-link" data-product="mochila" href="#" target="_blank" rel="sponsored noopener">Ver precio en Mercado Libre</a>
+            </div>
+          </article>
+<article class="product-card" data-tags="equipaje familia playa" data-category="organizacion">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1581553680321-4fffae59fccd?auto=format&fit=crop&w=900&q=82" alt="Organizadores de equipaje para maleta" loading="lazy" decoding="async">
+              <span class="badge">Compra inteligente</span>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Organización</span>
+              <h3>Organizadores para maleta</h3>
+              <div class="rating" aria-label="Calificación externa 4.6 de 5">★★★★☆ 4.6/5</div>
+              <div class="rating-box">
+                <strong>Calificación de referencia en internet</strong>
+                <span>Organizadores de maleta comparables, valorados con 4.6/5 y miles de opiniones.</span>
+              </div>
+              <p><strong>Problema que resuelve:</strong> evita el desorden dentro de la maleta y reduce el tiempo al empacar y desempacar.</p>
+              <ul class="features">
+                <li>Separa ropa, calzado y accesorios</li>
+                <li>Aprovecha mejor el espacio disponible</li>
+                <li>Útil para viajes familiares y largos</li>
+              </ul>
+              <p><strong>Recomendado para:</strong> familias, parejas y viajes de más de tres días.</p>
+              <p><strong>¿Por qué lo elegimos?</strong> Es uno de los accesorios con mejor relación entre costo y utilidad.</p>
+              <a class="button button-primary affiliate-link" data-product="organizadores" href="#" target="_blank" rel="sponsored noopener">Ver precio en Mercado Libre</a>
+            </div>
+          </article>
+<article class="product-card" data-tags="equipaje familia imprescindibles" data-category="equipaje">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?auto=format&fit=crop&w=900&q=82" alt="Báscula digital portátil para equipaje" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-category">Equipaje</span>
+              <h3>Báscula digital para equipaje</h3>
+              <div class="rating">Calificación por confirmar</div>
+              <div class="rating-box rating-pending">
+                <strong>Pendiente de publicación final</strong>
+                <span>Se mostrará la nota real de Mercado Libre cuando se elija la báscula específica.</span>
+              </div>
+              <p><strong>Problema que resuelve:</strong> ayuda a evitar sobrepeso y cargos inesperados en el aeropuerto.</p>
+              <ul class="features">
+                <li>Lectura rápida y portátil</li>
+                <li>Útil antes de salir y al regresar</li>
+                <li>Ideal para compras durante el viaje</li>
+              </ul>
+              <p><strong>Recomendado para:</strong> viajes con equipaje documentado.</p>
+              <p><strong>¿Por qué lo elegimos?</strong> Puede pagarse sola al evitar una sola penalización por exceso de peso.</p>
+              <a class="button button-primary affiliate-link" data-product="bascula" href="#" target="_blank" rel="sponsored noopener">Ver precio en Mercado Libre</a>
+            </div>
+          </article>
+<article class="product-card" data-tags="equipaje familia playa" data-category="organizacion">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=900&q=82" alt="Kit de botellas reutilizables para líquidos de viaje" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-category">Organización</span>
+              <h3>Kit para líquidos de viaje</h3>
+              <div class="rating">Calificación por confirmar</div>
+              <div class="rating-box rating-pending">
+                <strong>Pendiente de publicación final</strong>
+                <span>Se mostrará la nota real de Mercado Libre cuando se elija el kit para líquidos específico.</span>
+              </div>
+              <p><strong>Problema que resuelve:</strong> evita llevar envases grandes y reduce derrames dentro del equipaje.</p>
+              <ul class="features">
+                <li>Formato portátil</li>
+                <li>Envases reutilizables</li>
+                <li>Útil para equipaje de mano</li>
+              </ul>
+              <p><strong>Recomendado para:</strong> viajes cortos, playa y cabina.</p>
+              <p><strong>¿Por qué lo elegimos?</strong> Simplifica el equipaje y permite llevar solo lo necesario.</p>
+              <a class="button button-primary affiliate-link" data-product="liquidos" href="#" target="_blank" rel="sponsored noopener">Ver precio en Mercado Libre</a>
+            </div>
+          </article>
+<article class="product-card" data-tags="tecnologia playa invierno imprescindibles" data-category="tecnologia">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=900&q=82" alt="Batería portátil power bank para viaje" loading="lazy" decoding="async">
+              <span class="badge">Para todo viaje</span>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Tecnología</span>
+              <h3>Power bank de carga rápida</h3>
+              <div class="rating" aria-label="Calificación externa 4.6 de 5">★★★★☆ 4.6/5</div>
+              <div class="rating-box">
+                <strong>Calificación de referencia en internet</strong>
+                <span>Power bank comparable de 10,000 mAh, valorada con 4.6/5 y más de 71,000 opiniones.</span>
+              </div>
+              <p><strong>Problema que resuelve:</strong> evita quedarte sin batería cuando necesitas mapas, boletos o asistencia.</p>
+              <ul class="features">
+                <li>Carga tu celular durante trayectos largos</li>
+                <li>Útil en aeropuertos y excursiones</li>
+                <li>Compatible con diferentes dispositivos</li>
+              </ul>
+              <p><strong>Recomendado para:</strong> cualquier tipo de viaje.</p>
+              <p><strong>¿Por qué lo elegimos?</strong> El celular concentra gran parte de tu viaje; mantenerlo activo es una necesidad, no un lujo.</p>
+              <a class="button button-primary affiliate-link" data-product="powerbank" href="#" target="_blank" rel="sponsored noopener">Ver precio en Mercado Libre</a>
+            </div>
+          </article>
+<article class="product-card" data-tags="tecnologia internacional invierno imprescindibles" data-category="tecnologia">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1620288650879-20db0eb38c05?auto=format&fit=crop&w=900&q=82" alt="Adaptador universal para enchufes internacionales" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-category">Tecnología</span>
+              <h3>Adaptador universal de viaje</h3>
+              <div class="rating" aria-label="Calificación externa 4.6 de 5">★★★★☆ 4.6/5</div>
+              <div class="rating-box">
+                <strong>Calificación de referencia en internet</strong>
+                <span>Adaptador universal comparable, valorado con 4.6/5 y más de 1,200 opiniones.</span>
+              </div>
+              <p><strong>Problema que resuelve:</strong> evita llegar a otro país y descubrir que tus cargadores no son compatibles.</p>
+              <ul class="features">
+                <li>Compatible con múltiples tipos de enchufe</li>
+                <li>Puertos USB para varios dispositivos</li>
+                <li>Compacto y fácil de transportar</li>
+              </ul>
+              <p><strong>Recomendado para:</strong> Europa, Asia y viajes internacionales.</p>
+              <p><strong>¿Por qué lo elegimos?</strong> Reduce fricciones desde el primer día del viaje.</p>
+              <a class="button button-primary affiliate-link" data-product="adaptador" href="#" target="_blank" rel="sponsored noopener">Ver precio en Mercado Libre</a>
+            </div>
+          </article>
+<article class="product-card" data-tags="internacional familia" data-category="seguridad">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1544016768-982d1554f0b9?auto=format&fit=crop&w=900&q=82" alt="Portapasaporte y organizador de documentos de viaje" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-category">Seguridad</span>
+              <h3>Portapasaporte RFID</h3>
+              <div class="rating">Calificación por confirmar</div>
+              <div class="rating-box rating-pending">
+                <strong>Pendiente de publicación final</strong>
+                <span>Se mostrará la nota real de Mercado Libre cuando se elija el portapasaporte específico.</span>
+              </div>
+              <p><strong>Problema que resuelve:</strong> evita perder tiempo buscando documentos importantes durante el viaje.</p>
+              <ul class="features">
+                <li>Protección RFID</li>
+                <li>Organización de pasaporte y tarjetas</li>
+                <li>Formato compacto</li>
+              </ul>
+              <p><strong>Recomendado para:</strong> viajes internacionales y familias.</p>
+              <p><strong>¿Por qué lo elegimos?</strong> Mantiene la documentación crítica en un solo lugar y reduce el estrés.</p>
+              <a class="button button-primary affiliate-link" data-product="portapasaporte" href="#" target="_blank" rel="sponsored noopener">Ver precio en Mercado Libre</a>
+            </div>
+          </article>
+<article class="product-card" data-tags="internacional imprescindibles" data-category="seguridad">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&w=900&q=82" alt="Candado TSA para proteger maleta" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-category">Seguridad</span>
+              <h3>Candado TSA</h3>
+              <div class="rating">Calificación por confirmar</div>
+              <div class="rating-box rating-pending">
+                <strong>Pendiente de publicación final</strong>
+                <span>Se mostrará la nota real de Mercado Libre cuando se elija el candado TSA específico.</span>
+              </div>
+              <p><strong>Problema que resuelve:</strong> mejora la seguridad del equipaje sin complicar inspecciones aeroportuarias.</p>
+              <ul class="features">
+                <li>Combinación ajustable</li>
+                <li>Uso en maletas y mochilas</li>
+                <li>Compacto y resistente</li>
+              </ul>
+              <p><strong>Recomendado para:</strong> vuelos nacionales e internacionales.</p>
+              <p><strong>¿Por qué lo elegimos?</strong> Es económico y añade una capa básica de seguridad.</p>
+              <a class="button button-primary affiliate-link" data-product="candado" href="#" target="_blank" rel="sponsored noopener">Ver precio en Mercado Libre</a>
+            </div>
+          </article>
+<article class="product-card" data-tags="invierno" data-category="comodidad">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1520452112805-c6692c840af0?auto=format&fit=crop&w=900&q=82" alt="Almohada cervical para vuelos largos" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-category">Comodidad</span>
+              <h3>Almohada cervical de viaje</h3>
+              <div class="rating">Recomendación editorial</div>
+              <div class="rating-box">
+                <strong>Producto destacado en comparativas</strong>
+                <span>Las almohadas cervicales ergonómicas con soporte de cuello y barbilla destacan en pruebas editoriales para vuelos largos.</span>
+              </div>
+              <p><strong>Problema que resuelve:</strong> reduce molestias en cuello y espalda durante trayectos largos.</p>
+              <ul class="features">
+                <li>Soporte cervical</li>
+                <li>Material suave</li>
+                <li>Fácil de transportar</li>
+              </ul>
+              <p><strong>Recomendado para:</strong> vuelos largos, autobús y carretera.</p>
+              <p><strong>¿Por qué lo elegimos?</strong> Mejora la comodidad cuando el tiempo de traslado es parte importante del viaje.</p>
+              <a class="button button-primary affiliate-link" data-product="almohada" href="#" target="_blank" rel="sponsored noopener">Ver precio en Mercado Libre</a>
+            </div>
+          </article>
+          </div>
+
+          <div class="carousel-controls" aria-label="Navegación del catálogo">
+            <button class="carousel-btn" id="dynamicPrev" type="button" aria-label="Ver productos anteriores">←</button>
+            <button class="carousel-btn" id="dynamicNext" type="button" aria-label="Ver productos siguientes">→</button>
+          </div>
+        </div>
+
+        <p class="affiliate-note">
+          Aviso de afiliación: algunos enlaces de esta página son enlaces de afiliado. Viajes Casal podría recibir una comisión si realizas una compra, sin costo adicional para ti. Los precios, vendedores, existencias, condiciones, garantías y calificaciones de Mercado Libre pueden cambiar sin previo aviso.
+        </p>
+      </div>
+    </section>
+
+    <section class="kit-section">
+      <div class="container kit-layout">
+        <div>
+          <span class="section-kicker" style="color:#80F5FF">Viaja sin improvisar</span>
+          <h2>Arma tu kit según el tipo de viaje</h2>
+          <p>No necesitas comprar todo. Empieza por resolver los riesgos y molestias más probables de tu próximo trayecto.</p>
+
+          <div class="kit-list">
+            <div class="kit-item"><span>1</span> Viaje corto: mochila, organizadores y power bank.</div>
+            <div class="kit-item"><span>2</span> Vuelo internacional: adaptador, portapasaporte y candado TSA.</div>
+            <div class="kit-item"><span>3</span> Vacaciones familiares: báscula, organizadores y kit para líquidos.</div>
+            <div class="kit-item"><span>4</span> Vuelo largo: almohada cervical y batería portátil.</div>
+          </div>
+
+          <a class="button button-primary" href="#productos">Explorar el catálogo</a>
+        </div>
+
+        <div class="kit-image">
+          <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1000&q=85" alt="Viajeros preparando una aventura por carretera" loading="lazy" decoding="async">
+          <div class="floating-card">
+            Kit esencial
+            <small>Empieza con 3 productos</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+<section class="shopping-assistant" id="asistente-compra">
+<div class="container">
+<header class="section-head"><span class="section-kicker">Recomendación personalizada</span><h2>Asistente inteligente de compra</h2><p>Responde cuatro preguntas y recibe un kit recomendado según tu viaje.</p></header>
+<div class="assistant-panel">
+<div class="assistant-progress"><div class="assistant-progress-step active" data-progress="1"></div><div class="assistant-progress-step" data-progress="2"></div><div class="assistant-progress-step" data-progress="3"></div><div class="assistant-progress-step" data-progress="4"></div></div>
+<div class="assistant-step active" data-step="1"><h3>¿Qué tipo de viaje realizarás?</h3><div class="assistant-options">
+<button class="assistant-option" data-k="tripType" data-v="playa">🏖️ Playa</button><button class="assistant-option" data-k="tripType" data-v="internacional">🌍 Internacional</button><button class="assistant-option" data-k="tripType" data-v="invierno">❄️ Invierno</button><button class="assistant-option" data-k="tripType" data-v="familia">👨‍👩‍👧 Familiar</button><button class="assistant-option" data-k="tripType" data-v="negocios">💼 Negocios</button><button class="assistant-option" data-k="tripType" data-v="mochilero">🎒 Mochilero</button>
+</div></div>
+<div class="assistant-step" data-step="2"><h3>¿Cuántos días durará?</h3><div class="assistant-options"><button class="assistant-option" data-k="days" data-v="1-3">1–3 días</button><button class="assistant-option" data-k="days" data-v="4-7">4–7 días</button><button class="assistant-option" data-k="days" data-v="8-15">8–15 días</button><button class="assistant-option" data-k="days" data-v="15+">Más de 15 días</button></div></div>
+<div class="assistant-step" data-step="3"><h3>¿Viajarás en avión?</h3><div class="assistant-options"><button class="assistant-option" data-k="plane" data-v="yes">✈️ Sí</button><button class="assistant-option" data-k="plane" data-v="no">🚗 No</button></div></div>
+<div class="assistant-step" data-step="4"><h3>¿Documentarás equipaje?</h3><div class="assistant-options"><button class="assistant-option" data-k="checkedBag" data-v="yes">🧳 Sí</button><button class="assistant-option" data-k="checkedBag" data-v="no">🎒 No</button><button class="assistant-option" data-k="checkedBag" data-v="unsure">🤔 Aún no sé</button></div></div>
+<div class="assistant-nav"><button class="button button-outline" id="assistantPrev" type="button">Anterior</button><button class="button button-primary" id="assistantNext" type="button">Siguiente</button></div>
+<div class="assistant-result" id="assistantResult"><div class="assistant-result-card"><span class="assistant-result-badge">Kit personalizado</span><h3 id="assistantResultTitle">Tu kit recomendado</h3><p id="assistantResultCopy"></p><div class="assistant-score"><span class="assistant-score-number" id="assistantScore">95%</span><span>Nivel de coincidencia</span></div><div class="assistant-products" id="assistantProducts"></div><button class="button button-outline" id="assistantReset" type="button">Volver a empezar</button></div></div>
+</div></div></section>
+
+<section class="interactive-checklist" id="checklist-interactivo">
+      <div class="container">
+        <header class="section-head">
+          <span class="section-kicker">Herramienta gratuita</span>
+          <h2>Checklist interactivo del viajero</h2>
+          <p>Elige tu tipo de viaje, marca lo que ya tienes preparado y guarda automáticamente tu avance.</p>
+        </header>
+
+        <div class="checklist-panel">
+          <div class="trip-type-tabs" aria-label="Tipo de viaje">
+            <button class="trip-type-btn active" data-trip-type="general">✈️ General</button>
+            <button class="trip-type-btn" data-trip-type="playa">🏖 Playa</button>
+            <button class="trip-type-btn" data-trip-type="invierno">❄️ Invierno</button>
+            <button class="trip-type-btn" data-trip-type="internacional">🌍 Internacional</button>
+            <button class="trip-type-btn" data-trip-type="familia">👨‍👩‍👧 Familia</button>
+            <button class="trip-type-btn" data-trip-type="negocios">💼 Negocios</button>
+          </div>
+
+          <div class="checklist-progress">
+            <div class="progress-copy">
+              <span>Preparación del viaje</span>
+              <span id="checklistProgressText">0% completado</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" id="checklistProgressFill"></div>
+            </div>
+          </div>
+
+          <div class="checklist-grid" id="checklistGrid"></div>
+
+          <div class="checklist-actions">
+            <button class="button button-primary" id="checkAllBtn" type="button">Marcar todo</button>
+            <button class="button button-outline" id="resetChecklistBtn" type="button">Reiniciar checklist</button>
+          </div>
+
+          <p class="checklist-note">Tu progreso se guarda únicamente en este navegador.</p>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="checklist" id="checklist">
+      <div class="container">
+        <div class="checklist-box">
+          <span class="section-kicker">Recurso gratuito</span>
+          <h2>Recibe la checklist para preparar tu viaje</h2>
+          <p>Documentos, equipaje, tecnología, dinero, salud y pendientes importantes antes de salir.</p>
+
+          <!-- Esta demostración no envía datos. Conecta el formulario con Tally, Mailchimp, Brevo o tu servicio de email marketing. -->
+          <form class="email-form" id="emailForm">
+            <label class="hidden" for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" placeholder="Tu correo electrónico" required>
+            <button class="button button-primary" type="submit">Quiero la checklist</button>
+          </form>
+          <div class="form-message" id="formMessage" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+<section class="smart-compare" id="comparador">
+      <div class="container">
+        <header class="section-head">
+          <span class="section-kicker">Decide con más claridad</span>
+          <h2>Comparador inteligente de productos</h2>
+          <p>Selecciona tu tipo de viaje y compara los accesorios más útiles según prioridad, facilidad de transporte y utilidad real.</p>
+        </header>
+
+        <div class="compare-panel">
+          <div class="compare-tabs" aria-label="Escenarios de comparación">
+            <button class="compare-tab active" data-compare-scenario="primer-viaje">✈️ Primer viaje</button>
+            <button class="compare-tab" data-compare-scenario="internacional">🌍 Internacional</button>
+            <button class="compare-tab" data-compare-scenario="vuelo-largo">🛫 Vuelo largo</button>
+            <button class="compare-tab" data-compare-scenario="familia">👨‍👩‍👧 Familia</button>
+          </div>
+
+          <div class="compare-grid" id="compareGrid"></div>
+
+          <p class="compare-note">
+            La comparación es editorial y se basa en utilidad práctica. Verifica precio, disponibilidad y valoración en la publicación final de Mercado Libre.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="preguntas">
+      <div class="container">
+        <header class="section-head">
+          <span class="section-kicker">Preguntas frecuentes</span>
+          <h2>Compra con información clara</h2>
+          <p>Viajes Casal recomienda productos, pero no interviene en la venta ni en la entrega.</p>
+        </header>
+
+        <div class="faq-grid">
+          <details>
+            <summary>¿Viajes Casal vende directamente estos productos?</summary>
+            <p>No. Al presionar el botón serás dirigido a Mercado Libre, donde podrás revisar al vendedor, precio, envío, garantía y condiciones de compra.</p>
+          </details>
+          <details>
+            <summary>¿Los precios siempre son los mismos?</summary>
+            <p>No. Mercado Libre y sus vendedores pueden cambiar precios, promociones, disponibilidad y condiciones sin previo aviso.</p>
+          </details>
+          <details>
+            <summary>¿Cómo seleccionan los productos recomendados?</summary>
+            <p>La selección prioriza utilidad para viajeros, facilidad de transporte, relación calidad-precio y necesidades frecuentes antes o durante un viaje.</p>
+          </details>
+          <details>
+            <summary>¿Viajes Casal recibe una comisión?</summary>
+            <p>Algunos enlaces pueden generar una comisión de afiliado para Viajes Casal cuando se concreta una compra válida, sin incrementar el precio para el comprador.</p>
+          </details>
+          <details>
+            <summary>¿También puedo cotizar vuelos, hotel o un paquete?</summary>
+            <p>Sí. Utiliza el botón de cotización para solicitar una propuesta personalizada de vuelos, hospedaje, traslados, tours o paquetes de viaje.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <div class="cta-box">
+          <h2>¿Ya tienes listo tu equipaje?</h2>
+          <p>Ahora falta elegir el destino. Solicita una cotización personalizada y recibe acompañamiento antes, durante y después de tu viaje.</p>
+          <a class="button button-secondary" href="https://wa.me/5210000000000?text=Hola%20Viajes%20Casal,%20quiero%20cotizar%20mi%20próximo%20viaje" target="_blank" rel="noopener">✈️ Cotizar mi próximo viaje</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  
+<section class="social-section" id="redes">
+  <div class="container">
+    <header class="section-head">
+      <span class="section-kicker">Conecta con Viajes Casal</span>
+      <h2>Síguenos y descubre nuevas ideas para viajar</h2>
+      <p>Promociones, inspiración, recomendaciones y contenido para preparar tu próxima experiencia.</p>
+    </header>
+    <div class="social-grid">
+      <a class="social-icon-link" href="https://www.facebook.com/share/1GjFtGYqvk/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.24 0-1.62.77-1.62 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12Z"/></svg></a>
+      <a class="social-icon-link" href="https://www.instagram.com/viaja.pau?igsh=bWZzeGphM2JveHV0&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5ZM17.75 6.25a1.05 1.05 0 1 1-1.05 1.05 1.05 1.05 0 0 1 1.05-1.05Z"/></svg></a>
+      <a class="social-icon-link" href="https://www.tiktok.com/@viajes_bumeran_casal?_r=1&_t=ZS-97tnwvvVyF8" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 3c.4 2.1 1.6 3.4 3.5 4v3.1a9 9 0 0 1-3.5-1.1v6.1a6.1 6.1 0 1 1-5.2-6V12a3.1 3.1 0 1 0 2.1 3V3h3.1Z"/></svg></a>
+      <a class="social-icon-link" href="https://youtube.com/@inspirateaviajar?si=x4N2enDjoUBr3QF_" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.5-.45-5.2a3 3 0 0 0-2.1-2.1C18.75 4.25 12 4.25 12 4.25s-6.75 0-8.45.45a3 3 0 0 0-2.1 2.1C1 8.5 1 12 1 12s0 3.5.45 5.2a3 3 0 0 0 2.1 2.1c1.7.45 8.45.45 8.45.45s6.75 0 8.45-.45a3 3 0 0 0 2.1-2.1C23 15.5 23 12 23 12ZM9.75 15.5v-7l6 3.5-6 3.5Z"/></svg></a>
+      <a class="social-icon-link" href="https://wa.me/529983921530?text=Hola%2C%20vi%20El%20Kit%20del%20Viajero%20y%20quiero%20cotizar%20mi%20pr%C3%B3ximo%20viaje%20con%20Viajes%20Casal." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.82 11.82 0 0 0 1.93 17.73L.25 23.88l6.3-1.65a11.8 11.8 0 0 0 5.65 1.44h.01A11.82 11.82 0 0 0 20.52 3.48Zm-8.31 18.2h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.74.98 1-3.64-.24-.37A9.82 9.82 0 1 1 12.21 21.68Zm5.39-7.36c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.76.96-.94 1.16-.17.2-.34.22-.64.07-1.73-.86-2.87-1.54-4.01-3.5-.3-.52.3-.48.86-1.6.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35Z"/></svg></a>
+    </div>
+  </div>
+</section>
+<a class="whatsapp-quote-float" href="https://wa.me/529983921530?text=Hola%2C%20vi%20El%20Kit%20del%20Viajero%20y%20quiero%20cotizar%20mi%20pr%C3%B3ximo%20viaje%20con%20Viajes%20Casal." target="_blank" rel="noopener noreferrer" aria-label="Cotizar viaje por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.82 11.82 0 0 0 1.93 17.73L.25 23.88l6.3-1.65a11.8 11.8 0 0 0 5.65 1.44h.01A11.82 11.82 0 0 0 20.52 3.48Zm-8.31 18.2h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.74.98 1-3.64-.24-.37A9.82 9.82 0 1 1 12.21 21.68Zm5.39-7.36c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.76.96-.94 1.16-.17.2-.34.22-.64.07-1.73-.86-2.87-1.54-4.01-3.5-.3-.52.3-.48.86-1.6.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35Z"/></svg></a>
+
+<footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="#inicio">
+            <span class="brand-mark">✈</span>
+            <span>EL KIT DEL VIAJERO <small>BY VIAJES CASAL</small></span>
+          </a>
+          <p>Agencia de viajes 100% online con atención personalizada y acompañamiento por WhatsApp.</p>
+        </div>
+
+        <div>
+          <h3>Explorar</h3>
+          <a href="#productos">Productos</a>
+          <a href="#checklist">Checklist</a>
+          <a href="#preguntas">Preguntas frecuentes</a>
+        </div>
+
+        <div>
+          <h3>Información</h3>
+          <a href="#" onclick="alert('Agrega aquí tu aviso de privacidad.'); return false;">Aviso de privacidad</a>
+          <a href="#" onclick="alert('Agrega aquí tus términos de uso.'); return false;">Términos de uso</a>
+          <a href="https://wa.me/5210000000000" target="_blank" rel="noopener">Contacto</a>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © <span id="year"></span> El Kit del Viajero by Viajes Casal. Guía de recomendaciones para viajar cómodo, organizado y seguro.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    
+    const EMAIL_MARKETING_ENDPOINT = "";
+
+    const affiliateLinks = {
+      mochila: "#",
+      organizadores: "#",
+      powerbank: "#",
+      adaptador: "#",
+      candado: "#",
+      bascula: "#",
+      portapasaporte: "#",
+      almohada: "#",
+      liquidos: "#"
+    };
+
+    document.querySelectorAll(".affiliate-link").forEach(link => {
+      const url = affiliateLinks[link.dataset.product];
+      if (url && url !== "#") {
+        link.href = url;
+      } else {
+        link.addEventListener("click", event => {
+          event.preventDefault();
+          alert("Falta agregar el enlace de afiliado para este producto.");
+        });
+      }
+    });
+
+    const categoryButtons = document.querySelectorAll("[data-category-filter]");
+    const dynamicCarousel = document.getElementById("dynamicProductCarousel");
+    const dynamicCards = dynamicCarousel
+      ? Array.from(dynamicCarousel.querySelectorAll(".product-card"))
+      : [];
+
+    function applyCategoryFilter(category) {
+      dynamicCards.forEach(card => {
+        const tags = (card.dataset.tags || "").split(" ").filter(Boolean);
+        const visible = category === "all" || tags.includes(category);
+        card.classList.toggle("is-hidden", !visible);
+      });
+
+      if (dynamicCarousel) {
+        dynamicCarousel.scrollTo({ left: 0, behavior: "smooth" });
+      }
+    }
+
+    categoryButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        categoryButtons.forEach(item => item.classList.remove("active"));
+        button.classList.add("active");
+        applyCategoryFilter(button.dataset.categoryFilter);
+      });
+    });
+
+    function scrollOneCard(container, direction, gap) {
+      if (!container) return;
+      const card = container.querySelector(
+        ".favorite-card, .product-card:not(.is-hidden)"
+      );
+      const amount = card
+        ? card.getBoundingClientRect().width + gap
+        : container.clientWidth;
+      container.scrollBy({ left: direction * amount, behavior: "smooth" });
+    }
+
+    const favoritesCarousel = document.getElementById("favoritesCarousel");
+    document.getElementById("favoritesPrev")?.addEventListener("click", () => {
+      scrollOneCard(favoritesCarousel, -1, 22);
+    });
+    document.getElementById("favoritesNext")?.addEventListener("click", () => {
+      scrollOneCard(favoritesCarousel, 1, 22);
+    });
+
+    document.getElementById("dynamicPrev")?.addEventListener("click", () => {
+      scrollOneCard(dynamicCarousel, -1, 22);
+    });
+    document.getElementById("dynamicNext")?.addEventListener("click", () => {
+      scrollOneCard(dynamicCarousel, 1, 22);
+    });
+
+    const emailForm = document.getElementById("emailForm");
+    const formMessage = document.getElementById("formMessage");
+
+    if (emailForm && formMessage) {
+      emailForm.addEventListener("submit", async event => {
+        event.preventDefault();
+        const emailInput = emailForm.querySelector('input[type="email"]');
+        const email = emailInput?.value.trim();
+
+        if (!EMAIL_MARKETING_ENDPOINT) {
+          formMessage.textContent = "Formulario listo: agrega el endpoint de Brevo, Mailchimp o Tally en EMAIL_MARKETING_ENDPOINT.";
+          return;
+        }
+
+        try {
+          const response = await fetch(EMAIL_MARKETING_ENDPOINT, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, source: "El Kit del Viajero" })
+          });
+
+          if (!response.ok) throw new Error("No se pudo registrar");
+          formMessage.textContent = "¡Listo! Revisa tu correo para continuar.";
+          emailForm.reset();
+          if (typeof gtag === "function") gtag("event", "generate_lead", { method: "email" });
+          if (typeof fbq === "function") fbq("track", "Lead");
+        } catch (error) {
+          formMessage.textContent = "No fue posible registrar el correo. Intenta nuevamente.";
+        }
+      });
+    }
+
+    applyCategoryFilter("all");
+
+    const checklistData = {
+      general: [
+        "Identificación oficial",
+        "Boletos y reservaciones",
+        "Cargador del celular",
+        "Power bank",
+        "Medicamentos",
+        "Dinero y tarjetas",
+        "Ropa interior",
+        "Artículos de higiene",
+        "Audífonos",
+        "Candado TSA",
+        "Organizadores de maleta",
+        "Seguro de viaje"
+      ],
+      playa: [
+        "Traje de baño",
+        "Protector solar",
+        "Lentes de sol",
+        "Sombrero o gorra",
+        "Sandalias",
+        "Toalla ligera",
+        "Bolsa impermeable",
+        "Repelente",
+        "Power bank",
+        "Kit para líquidos",
+        "Medicamentos",
+        "Seguro de viaje"
+      ],
+      invierno: [
+        "Abrigo",
+        "Guantes",
+        "Gorro",
+        "Bufanda",
+        "Ropa térmica",
+        "Calzado impermeable",
+        "Crema hidratante",
+        "Adaptador universal",
+        "Power bank",
+        "Medicamentos",
+        "Seguro de viaje",
+        "Mochila de cabina"
+      ],
+      internacional: [
+        "Pasaporte vigente",
+        "Visa o permiso migratorio",
+        "Seguro de viaje",
+        "Adaptador universal",
+        "Portapasaporte",
+        "Copias de documentos",
+        "Boletos y hospedaje",
+        "Dinero y tarjetas",
+        "Power bank",
+        "Medicamentos",
+        "Candado TSA",
+        "eSIM o roaming"
+      ],
+      familia: [
+        "Documentos de todos",
+        "Medicamentos infantiles",
+        "Snacks",
+        "Ropa extra",
+        "Entretenimiento",
+        "Organizadores de maleta",
+        "Toallitas húmedas",
+        "Protector solar",
+        "Power bank",
+        "Seguro de viaje",
+        "Boletos y reservaciones",
+        "Contactos de emergencia"
+      ],
+      negocios: [
+        "Laptop",
+        "Cargador de laptop",
+        "Adaptador universal",
+        "Power bank",
+        "Documentos de trabajo",
+        "Ropa formal",
+        "Tarjetas de presentación",
+        "Audífonos",
+        "Mochila de cabina",
+        "Reservaciones",
+        "Identificación",
+        "Seguro de viaje"
+      ]
+    };
+
+    const checklistGrid = document.getElementById("checklistGrid");
+    const progressText = document.getElementById("checklistProgressText");
+    const progressFill = document.getElementById("checklistProgressFill");
+    const tripTypeButtons = document.querySelectorAll(".trip-type-btn");
+    const checkAllBtn = document.getElementById("checkAllBtn");
+    const resetChecklistBtn = document.getElementById("resetChecklistBtn");
+
+    let currentTripType = localStorage.getItem("kitViajeroTripType") || "general";
+
+    function storageKey() {
+      return `kitViajeroChecklist_${currentTripType}`;
+    }
+
+    function getSavedChecks() {
+      try {
+        return JSON.parse(localStorage.getItem(storageKey())) || [];
+      } catch {
+        return [];
+      }
+    }
+
+    function saveChecks() {
+      const values = Array.from(
+        checklistGrid.querySelectorAll('input[type="checkbox"]')
+      ).filter(input => input.checked).map(input => input.value);
+
+      localStorage.setItem(storageKey(), JSON.stringify(values));
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const inputs = checklistGrid.querySelectorAll('input[type="checkbox"]');
+      const checked = checklistGrid.querySelectorAll('input[type="checkbox"]:checked');
+      const percentage = inputs.length
+        ? Math.round((checked.length / inputs.length) * 100)
+        : 0;
+
+      progressText.textContent = `${percentage}% completado`;
+      progressFill.style.width = `${percentage}%`;
+    }
+
+    function renderChecklist() {
+      if (!checklistGrid) return;
+
+      const saved = getSavedChecks();
+      checklistGrid.innerHTML = "";
+
+      checklistData[currentTripType].forEach(item => {
+        const label = document.createElement("label");
+        label.className = "check-item";
+
+        const input = document.createElement("input");
+        input.type = "checkbox";
+        input.value = item;
+        input.checked = saved.includes(item);
+        input.addEventListener("change", saveChecks);
+
+        const span = document.createElement("span");
+        span.textContent = item;
+
+        label.append(input, span);
+        checklistGrid.appendChild(label);
+      });
+
+      tripTypeButtons.forEach(button => {
+        button.classList.toggle(
+          "active",
+          button.dataset.tripType === currentTripType
+        );
+      });
+
+      updateProgress();
+    }
+
+    tripTypeButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        currentTripType = button.dataset.tripType;
+        localStorage.setItem("kitViajeroTripType", currentTripType);
+        renderChecklist();
+      });
+    });
+
+    checkAllBtn?.addEventListener("click", () => {
+      checklistGrid.querySelectorAll('input[type="checkbox"]').forEach(input => {
+        input.checked = true;
+      });
+      saveChecks();
+    });
+
+    resetChecklistBtn?.addEventListener("click", () => {
+      localStorage.removeItem(storageKey());
+      renderChecklist();
+    });
+
+    renderChecklist();
+
+
+    const compareData = {
+      "primer-viaje": [
+        {
+          product: "mochila",
+          title: "Mochila de cabina 40 L",
+          description: "La opción más versátil para comenzar y reducir la necesidad de documentar equipaje.",
+          image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=82",
+          badge: "Mejor opción general",
+          winner: true,
+          scores: [
+            ["Utilidad", "Muy alta"],
+            ["Portabilidad", "Alta"],
+            ["Relación costo-utilidad", "Muy alta"],
+            ["Ideal para", "Viajes cortos"]
+          ]
+        },
+        {
+          product: "powerbank",
+          title: "Power bank",
+          description: "Mantiene disponible el celular para mapas, boletos, reservas y emergencias.",
+          image: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=900&q=82",
+          badge: "Esencial digital",
+          winner: false,
+          scores: [
+            ["Utilidad", "Muy alta"],
+            ["Portabilidad", "Muy alta"],
+            ["Relación costo-utilidad", "Alta"],
+            ["Ideal para", "Todo viaje"]
+          ]
+        },
+        {
+          product: "organizadores",
+          title: "Organizadores de maleta",
+          description: "Mejoran el orden y ayudan a aprovechar el espacio desde el primer viaje.",
+          image: "https://images.unsplash.com/photo-1581553680321-4fffae59fccd?auto=format&fit=crop&w=900&q=82",
+          badge: "Mejor valor",
+          winner: false,
+          scores: [
+            ["Utilidad", "Alta"],
+            ["Portabilidad", "Alta"],
+            ["Relación costo-utilidad", "Muy alta"],
+            ["Ideal para", "Parejas y familia"]
+          ]
+        }
+      ],
+      internacional: [
+        {
+          product: "adaptador",
+          title: "Adaptador universal",
+          description: "Evita incompatibilidades eléctricas en hoteles, aeropuertos y alojamientos.",
+          image: "https://images.unsplash.com/photo-1620288650879-20db0eb38c05?auto=format&fit=crop&w=900&q=82",
+          badge: "Imprescindible internacional",
+          winner: true,
+          scores: [
+            ["Utilidad", "Muy alta"],
+            ["Portabilidad", "Muy alta"],
+            ["Relación costo-utilidad", "Muy alta"],
+            ["Ideal para", "Europa y Asia"]
+          ]
+        },
+        {
+          product: "portapasaporte",
+          title: "Portapasaporte RFID",
+          description: "Mantiene documentos y tarjetas importantes en un solo lugar.",
+          image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=82",
+          badge: "Documentación segura",
+          winner: false,
+          scores: [
+            ["Utilidad", "Alta"],
+            ["Portabilidad", "Muy alta"],
+            ["Relación costo-utilidad", "Alta"],
+            ["Ideal para", "Viajes internacionales"]
+          ]
+        },
+        {
+          product: "candado",
+          title: "Candado TSA",
+          description: "Añade una capa básica de seguridad al equipaje documentado.",
+          image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=82",
+          badge: "Seguridad",
+          winner: false,
+          scores: [
+            ["Utilidad", "Alta"],
+            ["Portabilidad", "Muy alta"],
+            ["Relación costo-utilidad", "Alta"],
+            ["Ideal para", "Equipaje documentado"]
+          ]
+        }
+      ],
+      "vuelo-largo": [
+        {
+          product: "almohada",
+          title: "Almohada cervical",
+          description: "Mejora el descanso y reduce molestias durante trayectos prolongados.",
+          image: "https://images.unsplash.com/photo-1520452112805-c6692c840af0?auto=format&fit=crop&w=900&q=82",
+          badge: "Mayor comodidad",
+          winner: true,
+          scores: [
+            ["Utilidad", "Muy alta"],
+            ["Portabilidad", "Media"],
+            ["Relación costo-utilidad", "Alta"],
+            ["Ideal para", "Vuelos largos"]
+          ]
+        },
+        {
+          product: "powerbank",
+          title: "Power bank",
+          description: "Permite mantener activos dispositivos durante escalas y vuelos extensos.",
+          image: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=900&q=82",
+          badge: "Conectividad",
+          winner: false,
+          scores: [
+            ["Utilidad", "Muy alta"],
+            ["Portabilidad", "Muy alta"],
+            ["Relación costo-utilidad", "Alta"],
+            ["Ideal para", "Escalas largas"]
+          ]
+        },
+        {
+          product: "audifonos",
+          title: "Audífonos de viaje",
+          description: "Ayudan a descansar, concentrarse o consumir entretenimiento durante el trayecto.",
+          image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=82",
+          badge: "Entretenimiento",
+          winner: false,
+          scores: [
+            ["Utilidad", "Alta"],
+            ["Portabilidad", "Alta"],
+            ["Relación costo-utilidad", "Media"],
+            ["Ideal para", "Vuelos y autobús"]
+          ]
+        }
+      ],
+      familia: [
+        {
+          product: "organizadores",
+          title: "Organizadores de maleta",
+          description: "Permiten separar ropa, accesorios y artículos de cada integrante.",
+          image: "https://images.unsplash.com/photo-1581553680321-4fffae59fccd?auto=format&fit=crop&w=900&q=82",
+          badge: "Mejor para familias",
+          winner: true,
+          scores: [
+            ["Utilidad", "Muy alta"],
+            ["Portabilidad", "Alta"],
+            ["Relación costo-utilidad", "Muy alta"],
+            ["Ideal para", "Familias"]
+          ]
+        },
+        {
+          product: "bascula",
+          title: "Báscula de equipaje",
+          description: "Ayuda a distribuir mejor el peso y evitar cargos por exceso.",
+          image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=82",
+          badge: "Ahorro potencial",
+          winner: false,
+          scores: [
+            ["Utilidad", "Alta"],
+            ["Portabilidad", "Muy alta"],
+            ["Relación costo-utilidad", "Muy alta"],
+            ["Ideal para", "Varias maletas"]
+          ]
+        },
+        {
+          product: "liquidos",
+          title: "Kit para líquidos",
+          description: "Facilita repartir productos de higiene sin cargar envases completos.",
+          image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=900&q=82",
+          badge: "Práctico",
+          winner: false,
+          scores: [
+            ["Utilidad", "Alta"],
+            ["Portabilidad", "Muy alta"],
+            ["Relación costo-utilidad", "Alta"],
+            ["Ideal para", "Viajes familiares"]
+          ]
+        }
+      ]
+    };
+
+    const compareGrid = document.getElementById("compareGrid");
+    const compareTabs = document.querySelectorAll(".compare-tab");
+
+    function renderCompareScenario(scenario) {
+      if (!compareGrid) return;
+
+      const items = compareData[scenario] || [];
+      compareGrid.innerHTML = items.map(item => {
+        const scores = item.scores.map(([label, value]) => `
+          <div class="compare-score-row">
+            <strong>${label}</strong>
+            <span class="compare-value">${value}</span>
+          </div>
+        `).join("");
+
+        return `
+          <article class="compare-card ${item.winner ? "is-winner" : ""}">
+            <div class="compare-image">
+              <img src="${item.image}" alt="${item.title}" loading="lazy" decoding="async">
+              <span class="compare-badge">${item.badge}</span>
+            </div>
+            <div class="compare-body">
+              <h3>${item.title}</h3>
+              <p>${item.description}</p>
+              <div class="compare-score">${scores}</div>
+              <a class="button button-primary affiliate-link"
+                 data-product="${item.product}"
+                 href="#"
+                 target="_blank"
+                 rel="sponsored noopener">
+                Ver en Mercado Libre
+              </a>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      compareGrid.querySelectorAll(".affiliate-link").forEach(link => {
+        const url = affiliateLinks[link.dataset.product];
+        if (url && url !== "#") {
+          link.href = url;
+        } else {
+          link.addEventListener("click", event => {
+            event.preventDefault();
+            alert("Falta agregar el enlace de afiliado para este producto.");
+          });
+        }
+      });
+
+      compareGrid.scrollTo({ left: 0, behavior: "smooth" });
+    }
+
+    compareTabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        compareTabs.forEach(item => item.classList.remove("active"));
+        tab.classList.add("active");
+        renderCompareScenario(tab.dataset.compareScenario);
+      });
+    });
+
+    renderCompareScenario("primer-viaje");
+
+    
+const aState={step:1,answers:{tripType:null,days:null,plane:null,checkedBag:null}};
+const aSteps=[...document.querySelectorAll(".assistant-step")],aProg=[...document.querySelectorAll(".assistant-progress-step")],aOpts=[...document.querySelectorAll(".assistant-option")];
+const aPrev=document.getElementById("assistantPrev"),aNext=document.getElementById("assistantNext"),aResult=document.getElementById("assistantResult");
+function aUI(){aSteps.forEach(x=>x.classList.toggle("active",+x.dataset.step===aState.step));aProg.forEach(x=>x.classList.toggle("active",+x.dataset.progress<=aState.step));aPrev.style.visibility=aState.step===1?"hidden":"visible";aNext.textContent=aState.step===4?"Ver mi recomendación":"Siguiente";const s=document.querySelector(`.assistant-step[data-step="${aState.step}"] .selected`);aNext.disabled=!s}
+aOpts.forEach(o=>o.onclick=()=>{document.querySelectorAll(`.assistant-option[data-k="${o.dataset.k}"]`).forEach(x=>x.classList.remove("selected"));o.classList.add("selected");aState.answers[o.dataset.k]=o.dataset.v;aUI()});
+const pInfo={mochila:["Mochila 40 L","Optimiza espacio y evita documentar."],powerbank:["Power bank","Mantiene activos mapas y boletos."],adaptador:["Adaptador universal","Clave para viajes internacionales."],organizadores:["Organizadores","Mejoran orden y espacio."],candado:["Candado TSA","Seguridad para equipaje."],bascula:["Báscula","Evita cargos por sobrepeso."],portapasaporte:["Portapasaporte","Organiza documentos."],almohada:["Almohada cervical","Mejora el descanso."],liquidos:["Kit para líquidos","Ideal para cabina y playa."]};
+function recommend(){let ps=["powerbank"],t="Tu kit recomendado",c="Seleccionamos accesorios útiles para tu viaje.",s=90;const a=aState.answers,add=x=>{if(!ps.includes(x))ps.push(x)};
+if(a.tripType==="internacional"){add("adaptador");add("portapasaporte");t="Kit internacional";s+=5}
+if(a.tripType==="playa"){add("liquidos");add("organizadores");t="Kit para playa"}
+if(a.tripType==="familia"){add("organizadores");add("bascula");t="Kit familiar";s+=3}
+if(a.tripType==="negocios"){add("mochila");add("adaptador");t="Kit de negocios"}
+if(a.tripType==="mochilero"){add("mochila");add("candado");t="Kit mochilero"}
+if(a.days==="1-3")add("mochila");if(a.days==="4-7")add("organizadores");if(["8-15","15+"].includes(a.days)){add("organizadores");add("bascula")}
+if(a.plane==="yes")add("almohada");if(a.checkedBag==="yes"){add("candado");add("bascula")}if(a.checkedBag==="no")add("mochila");
+ps=ps.slice(0,5);document.getElementById("assistantResultTitle").textContent=t;document.getElementById("assistantResultCopy").textContent=c;document.getElementById("assistantScore").textContent=Math.min(s,98)+"%";
+document.getElementById("assistantProducts").innerHTML=ps.map(x=>`<article class="assistant-product"><strong>✓ ${pInfo[x][0]}</strong><span>${pInfo[x][1]}</span><a class="button button-primary affiliate-link" data-product="${x}" href="#" target="_blank" rel="sponsored noopener">Ver producto</a></article>`).join("");
+document.querySelectorAll("#assistantProducts .affiliate-link").forEach(l=>{const u=affiliateLinks[l.dataset.product];if(u&&u!=="#")l.href=u;else l.onclick=e=>{e.preventDefault();alert("Falta agregar el enlace de afiliado.")}});
+aSteps.forEach(x=>x.classList.remove("active"));document.querySelector(".assistant-nav").style.display="none";aResult.classList.add("visible")}
+aNext.onclick=()=>{if(aState.step<4){aState.step++;aUI()}else recommend()};aPrev.onclick=()=>{if(aState.step>1){aState.step--;aUI()}};
+document.getElementById("assistantReset").onclick=()=>{aState.step=1;Object.keys(aState.answers).forEach(k=>aState.answers[k]=null);aOpts.forEach(x=>x.classList.remove("selected"));aResult.classList.remove("visible");document.querySelector(".assistant-nav").style.display="flex";aUI()};aUI();
+
+
+    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+      link.addEventListener("click", () => {
+        if (typeof gtag === "function") gtag("event", "contact", { method: "whatsapp" });
+        if (typeof fbq === "function") fbq("track", "Contact");
+      });
+    });
+
+    document.addEventListener("click", event => {
+      const affiliate = event.target.closest(".affiliate-link");
+      if (!affiliate) return;
+      if (typeof gtag === "function") {
+        gtag("event", "affiliate_click", { product: affiliate.dataset.product || "unknown" });
+      }
+    });
+
+document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
