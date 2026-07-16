@@ -1,0 +1,16 @@
+{
+  "name": "El Kit del Viajero by Viajes Casal",
+  "short_name": "Kit Viajero",
+  "description": "Productos, guías y checklists para preparar tu próximo viaje.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#06324a",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

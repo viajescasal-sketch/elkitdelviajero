@@ -2,6 +2,28 @@
 
 Landing page estática lista para publicarse en GitHub Pages.
 
+## Sprint 2 - Crecimiento orgánico
+
+El repositorio incluye ahora un Centro de Recursos SEO completamente estático y compatible con GitHub Pages:
+
+- `blog/`: portada del centro de recursos y 10 artículos.
+- `guias/`: formulario de acceso a 5 checklists descargables.
+- `output/pdf/`: archivos PDF finales.
+- `mochilas/`, `powerbanks/`, `adaptadores/`, `candados-tsa/` y `organizadores/`: landings por categoría.
+- `sitemap.xml` y `robots.txt`: archivos de descubrimiento para buscadores.
+- `assets/recursos.css` y `assets/recursos.js`: estilos y comportamiento compartidos.
+
+Los artículos incluyen breadcrumbs, tabla de contenidos, tiempo estimado de lectura, enlaces internos, preguntas frecuentes y datos estructurados `Article` y `FAQPage`.
+
+Para regenerar las páginas y PDFs después de editar los datos fuente:
+
+```powershell
+python scripts/generate_sprint2.py
+python scripts/generate_guides.py
+```
+
+El formulario guarda el lead localmente como demostración y desbloquea las descargas. Antes de una campaña real, conecta `assets/recursos.js` con Brevo, Mailchimp, Tally u otro proveedor de email marketing.
+
 ## Archivos
 
 - `index.html`: contiene toda la página, estilos y funciones.
