@@ -83,7 +83,7 @@ guidepage=header('Guías descargables para viajar','Checklists gratuitas para pl
 guidepage=guidepage.replace('<div class="grid"><article class="card has-image">','<div class="article-carousel" aria-label="Guías descargables"><article class="card has-image">')
 out=ROOT/'guias'/'index.html';out.parent.mkdir(exist_ok=True);out.write_text(guidepage,encoding='utf-8')
 
-sitemap=['', 'blog/','guias/']+[f'blog/{a[0]}/' for a in articles]+[f'{x}/' for x in landings]
+sitemap=['', 'aviso-privacidad.html', 'blog/','guias/']+[f'blog/{a[0]}/' for a in articles]+[f'{x}/' for x in landings]
 (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'<url><loc>{BASE}/{p}</loc><lastmod>2026-07-15</lastmod></url>\n' for p in sitemap)+'</urlset>',encoding='utf-8')
 (ROOT/'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n',encoding='utf-8')
 print(f'Generated {len(articles)} articles, {len(landings)} landings and resource hubs.')

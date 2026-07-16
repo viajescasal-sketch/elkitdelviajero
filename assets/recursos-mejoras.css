@@ -8,3 +8,4 @@
 .article-carousel::-webkit-scrollbar-thumb{background:var(--turquoise);border-radius:999px}
 .feature-image{width:100%;max-height:480px;margin:26px 0 34px;border-radius:24px;object-fit:cover;box-shadow:var(--shadow)}
 .image-caption{margin-top:-24px;margin-bottom:34px;color:var(--muted);font-size:.82rem}
+.privacy-consent{display:flex;flex:0 0 100%;flex-direction:column;gap:10px;margin:8px 0;color:var(--muted);font-size:.88rem}.consent-row{display:flex;align-items:flex-start;gap:10px}.privacy-consent input[type="checkbox"]{min-width:auto;margin-top:5px}.privacy-consent a{font-weight:800}.website-field{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;opacity:0!important}

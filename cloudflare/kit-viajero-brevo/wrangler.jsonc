@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "kit-viajero-brevo",
+  "main": "src/index.js",
+  "account_id": "29989a25202fc6730fff1aa86c445c7b",
+  "compatibility_date": "2026-07-16",
+  "workers_dev": true,
+  "vars": {
+    "BREVO_LIST_ID": "3",
+    "BREVO_TEMPLATE_ID": "1",
+    "ALLOWED_ORIGIN": "https://viajescasal-sketch.github.io"
+  }
+}
