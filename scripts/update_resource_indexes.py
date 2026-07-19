@@ -10,6 +10,12 @@ if "que-puedo-llevar-en-mochila-de-cabina-y-europa" not in text:
     text = text.replace(needle, card + needle, 1)
 blog.write_text(text, encoding="utf-8")
 
+text = blog.read_text(encoding="utf-8")
+whatsapp_cta = '<section class="whatsapp-channel"><div class="container"><div class="whatsapp-channel-box"><div class="whatsapp-channel-icon" aria-hidden="true">💬</div><div class="whatsapp-channel-copy"><span class="kicker">Comunidad Viajes Casal</span><h2>Más tips de viaje en nuestro canal de WhatsApp</h2><p>Recibe noticias, recomendaciones prácticas y promociones especiales directamente en WhatsApp.</p></div><a class="button whatsapp-channel-button" href="https://whatsapp.com/channel/0029VbDHt3IB4hdQ0VezRG0Y" target="_blank" rel="noopener">Unirme al canal</a></div></div></section>'
+if "0029VbDHt3IB4hdQ0VezRG0Y" not in text:
+    text = text.replace("</main><footer", whatsapp_cta + "</main><footer", 1)
+blog.write_text(text, encoding="utf-8")
+
 guides = root / "guias" / "index.html"
 text = guides.read_text(encoding="utf-8")
 text = text.replace("5 guías en PDF", "6 guías en PDF", 1).replace("las cinco descargas", "las seis descargas", 1)
