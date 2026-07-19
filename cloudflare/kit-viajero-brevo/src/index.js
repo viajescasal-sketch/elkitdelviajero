@@ -60,6 +60,10 @@ export default {
     const email = String(payload.email || "").trim().toLowerCase();
     if (!validEmail(email)) return json({ ok: false, error: "invalid_email" }, 400, origin);
     if (payload.privacyAccepted !== true) return json({ ok: false, error: "privacy_required" }, 400, origin);
+    const guide = payload.guide === "mochila-cabina-europa" ? "mochila-cabina-europa" : "biblioteca-guias";
+    const leadMagnetUrl = guide === "mochila-cabina-europa"
+      ? "https://viajescasal-sketch.github.io/elkitdelviajero/output/pdf/guia-mochila-cabina-europa.pdf"
+      : "https://viajescasal-sketch.github.io/elkitdelviajero/guias/";
 
     const contactPayload = {
       email,
@@ -84,8 +88,12 @@ export default {
       message = await brevo("/smtp/email", env.BREVO_API_KEY, {
         templateId: Number(env.BREVO_TEMPLATE_ID),
         to: [{ email }],
-        params: { DOWNLOAD_PAGE: "https://viajescasal-sketch.github.io/elkitdelviajero/guias/" },
-        tags: ["kit-viajero", "guias"]
+        params: {
+          DOWNLOAD_PAGE: "https://viajescasal-sketch.github.io/elkitdelviajero/guias/",
+          LEAD_MAGNET_URL: leadMagnetUrl,
+          GUIDE_NAME: guide === "mochila-cabina-europa" ? "Guía de mochila de cabina y Europa" : "Biblioteca de guías"
+        },
+        tags: ["kit-viajero", "guias", guide]
       });
     } catch (error) {
       console.error("Brevo email timeout", error?.message || error);

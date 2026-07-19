@@ -13,7 +13,7 @@ document.querySelectorAll('[data-lead-form]').forEach(form=>{
     const message=form.querySelector('.form-message');
     button.disabled=true;button.textContent='Registrando…';message.textContent='';
     try{
-      const response=await fetch(SUBSCRIPTION_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email.value.trim(),privacyAccepted:form.elements.privacyAccepted.checked,promoAccepted:form.elements.promoAccepted.checked,website:form.elements.website.value})});
+      const response=await fetch(SUBSCRIPTION_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email.value.trim(),privacyAccepted:form.elements.privacyAccepted.checked,promoAccepted:form.elements.promoAccepted.checked,website:form.elements.website.value,guide:form.dataset.guide||'recursos'})});
       if(!response.ok)throw new Error('subscription_failed');
       try{localStorage.setItem('kitViajeroLead',JSON.stringify({email:email.value.trim(),guide:form.dataset.guide||'recursos',date:new Date().toISOString()}))}catch{}
       form.querySelectorAll('[data-download]').forEach(link=>link.classList.add('visible'));
