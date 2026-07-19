@@ -469,6 +469,17 @@
       margin-inline: auto;
     }
 
+    .context-search { display:flex; justify-content:center; margin:0 auto 20px; }
+    .context-search-toggle { display:inline-flex; align-items:center; gap:8px; padding:10px 15px; border:1px solid var(--line); border-radius:999px; background:#fff; color:var(--navy); font:inherit; font-size:.86rem; font-weight:850; cursor:pointer; }
+    .context-search-toggle:hover { border-color:var(--turquoise); color:var(--turquoise-dark); }
+    .context-search-field { display:none; align-items:center; width:min(620px,100%); padding:5px 6px 5px 16px; border:1px solid var(--turquoise); border-radius:999px; background:#fff; box-shadow:0 10px 26px rgba(0,63,125,.09); }
+    .context-search.is-open .context-search-toggle { display:none; }
+    .context-search.is-open .context-search-field { display:flex; }
+    .context-search-field input { flex:1; min-width:0; padding:8px; border:0; outline:0; background:transparent; color:var(--ink); font:inherit; }
+    .context-search-close { width:36px; height:36px; border:0; border-radius:50%; background:#eefafb; color:var(--navy); font-size:1.1rem; cursor:pointer; }
+    .search-empty { display:none; margin:18px auto 0; padding:18px; border-radius:16px; background:#fff8eb; color:var(--ink); text-align:center; }
+    .search-empty.is-visible { display:block; }
+
     .dynamic-carousel-wrap {
       position: relative;
     }
@@ -770,7 +781,10 @@
 
     .product-body .button {
       margin-top: auto;
-      width: 100%;
+      width: auto;
+      align-self: center;
+      min-width: 140px;
+      text-align: center;
     }
 
     .affiliate-note {
@@ -1111,7 +1125,9 @@
     .favorite-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      padding: 14px;
+      background: #fff;
     }
 
     .favorite-rank {
@@ -1422,7 +1438,45 @@
     .compare-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      padding: 14px;
+      background: #fff;
+    }
+
+    /* Escaparate con fotos reales y movimiento 3D ligero */
+    .favorite-card, .product-card, .compare-card {
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+    .product-image img, .favorite-image img, .compare-image img {
+      transform: translateZ(22px) scale(.96);
+      filter: drop-shadow(0 18px 18px rgba(0, 35, 68, .18));
+      transition: transform .45s ease, filter .45s ease;
+    }
+    .product-card:hover .product-image img,
+    .favorite-card:hover .favorite-image img,
+    .compare-card:hover .compare-image img {
+      transform: translateZ(38px) scale(1.04) rotate(-1deg);
+      filter: drop-shadow(0 24px 24px rgba(0, 35, 68, .28));
+    }
+    .product-image img { object-fit: contain; padding: 14px; background: #fff; }
+    .product-image::after, .favorite-image::after, .compare-image::after {
+      content: "Foto real del producto";
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: rgba(0, 38, 72, .84);
+      color: #fff;
+      font-size: .65rem;
+      font-weight: 800;
+      letter-spacing: .02em;
+      pointer-events: none;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .favorite-card, .product-card, .compare-card,
+      .product-image img, .favorite-image img, .compare-image img { transform: none !important; transition: none !important; }
     }
 
     .compare-badge {
@@ -1566,6 +1620,14 @@
 .assistant-product .button{margin-top:auto;width:100%}
 @media(max-width:900px){.assistant-options,.assistant-products{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.assistant-panel{padding:24px 18px}.assistant-options,.assistant-products{grid-template-columns:1fr}.assistant-nav{flex-direction:column-reverse}.assistant-nav .button{width:100%}}
+
+/* Mantiene visible el menú principal en tablet y móvil. */
+@media(max-width:960px){
+  .site-header .nav{min-height:auto;padding:12px 0;flex-wrap:wrap}
+  .site-header .nav-links{display:flex;width:100%;gap:8px;overflow-x:auto;padding:2px 0 6px;scrollbar-width:thin}
+  .site-header .nav-links a:not(.button){display:inline-flex;flex:0 0 auto;padding:9px 12px;border-radius:999px;background:#eefafb;font-size:.82rem}
+  .site-header .nav-links .button{flex:0 0 auto;padding:9px 14px;font-size:.82rem}
+}
 
 
 .social-section{background:#071c2d;padding:64px 0;color:#fff}
@@ -1767,7 +1829,7 @@
           <div class="favorites-slider" id="favoritesCarousel">
             <article class="favorite-card">
               <div class="favorite-image">
-                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=82" alt="Mochila de cabina recomendada" loading="lazy" decoding="async">
+                <img src="assets/productos/mochila-cabina.webp" alt="Mochila Matein expandible de cabina de 40 litros" loading="lazy" decoding="async">
                 <span class="favorite-rank">#1</span>
               </div>
               <div class="favorite-content">
@@ -1781,12 +1843,12 @@
 
             <article class="favorite-card">
               <div class="favorite-image">
-                <img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=900&q=82" alt="Power bank recomendado para viajar" loading="lazy" decoding="async">
+                <img src="assets/productos/power-bank.webp" alt="Power bank de 20,000 mAh con indicador luminoso" loading="lazy" decoding="async">
                 <span class="favorite-rank">#2</span>
               </div>
               <div class="favorite-content">
                 <div class="favorite-label">Más recomendado</div>
-                <h3>Power bank</h3>
+                <h3>Power bank 20,000 mAh</h3>
                 <p>Mantén activo el celular donde llevas mapas, boletos y reservaciones.</p>
                 <ul><li>Útil en trayectos largos</li><li>Evita quedarte sin batería</li><li>Funciona para cualquier destino</li></ul>
                 <a class="button button-primary affiliate-link" data-product="powerbank" href="#" target="_blank" rel="sponsored noopener">Ver en Mercado Libre</a>
@@ -1795,7 +1857,7 @@
 
             <article class="favorite-card">
               <div class="favorite-image">
-                <img src="https://images.unsplash.com/photo-1581553680321-4fffae59fccd?auto=format&fit=crop&w=900&q=82" alt="Organizadores para maleta recomendados" loading="lazy" decoding="async">
+                <img src="assets/productos/organizadores.webp" alt="Set impermeable de ocho organizadores para maleta" loading="lazy" decoding="async">
                 <span class="favorite-rank">#3</span>
               </div>
               <div class="favorite-content">
@@ -1809,7 +1871,7 @@
 
             <article class="favorite-card">
               <div class="favorite-image">
-                <img src="https://images.unsplash.com/photo-1620288650879-20db0eb38c05?auto=format&fit=crop&w=900&q=82" alt="Adaptador universal recomendado" loading="lazy" decoding="async">
+                <img src="assets/productos/adaptador.webp" alt="Adaptador universal con puertos USB-A y USB-C" loading="lazy" decoding="async">
                 <span class="favorite-rank">#4</span>
               </div>
               <div class="favorite-content">
@@ -1823,7 +1885,7 @@
 
             <article class="favorite-card">
               <div class="favorite-image">
-                <img src="https://images.unsplash.com/photo-1520452112805-c6692c840af0?auto=format&fit=crop&w=900&q=82" alt="Almohada cervical recomendada para vuelos largos" loading="lazy" decoding="async">
+                <img src="assets/productos/almohada-cervical.webp" alt="Almohada cervical de espuma viscoelástica" loading="lazy" decoding="async">
                 <span class="favorite-rank">#5</span>
               </div>
               <div class="favorite-content">
@@ -1857,6 +1919,14 @@
           <p>Selecciona una categoría y descubre los productos más útiles para ese tipo de viaje.</p>
         </header>
 
+        <div class="context-search" id="productSearch">
+          <button class="context-search-toggle" type="button" aria-expanded="false" aria-controls="productSearchField">🔍 Buscar producto</button>
+          <div class="context-search-field" id="productSearchField">
+            <input id="productSearchInput" type="search" placeholder="Ej. mochila, Europa, batería..." aria-label="Buscar en el catálogo">
+            <button class="context-search-close" type="button" aria-label="Cerrar búsqueda">×</button>
+          </div>
+        </div>
+
         <div class="filters category-filters" aria-label="Filtrar productos por categoría">
           <button class="filter-btn active" data-category-filter="all">⭐ Todos</button>
           <button class="filter-btn" data-category-filter="equipaje">🎒 Equipaje</button>
@@ -1872,16 +1942,16 @@
           <div class="product-row dynamic-product-row" id="dynamicProductCarousel">
             <article class="product-card" data-tags="equipaje internacional playa invierno imprescindibles" data-category="equipaje">
             <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=82" alt="Mochila de viaje para equipaje de mano" loading="lazy" decoding="async">
+              <img src="assets/productos/mochila-cabina.webp" alt="Mochila Matein expandible de cabina de 40 litros" loading="lazy" decoding="async">
               <span class="badge">Más recomendado</span>
             </div>
             <div class="product-body">
               <span class="product-category">Equipaje</span>
               <h3>Mochila de cabina 40 L</h3>
-              <div class="rating" aria-label="Calificación externa 4.6 de 5">★★★★☆ 4.6/5</div>
+              <div class="rating" aria-label="Calificación 4.9 de 5">★★★★★ 4.9/5</div>
               <div class="rating-box">
-                <strong>Calificación de referencia en internet</strong>
-                <span>Mochila de cabina comparable, valorada con 4.6/5. La nota exacta debe revisarse en la publicación final de Mercado Libre.</span>
+                <strong>Publicación seleccionada en Mercado Libre</strong>
+                <span>4.9/5 con más de 2,000 opiniones, tienda oficial y envío Full al momento de la selección.</span>
               </div>
               <p><strong>Problema que resuelve:</strong> evita documentar equipaje en viajes cortos y te ayuda a llevar todo de forma práctica.</p>
               <ul class="features">
@@ -1891,21 +1961,38 @@
               </ul>
               <p><strong>Recomendado para:</strong> viajes nacionales, internacionales y trabajo.</p>
               <p><strong>¿Por qué lo elegimos?</strong> Es versátil, compacta y cubre la mayoría de las necesidades de un viajero frecuente.</p>
-              <a class="button button-primary affiliate-link" data-product="mochila" href="#" target="_blank" rel="sponsored noopener">Ver precio en Mercado Libre</a>
+              <a class="button button-primary affiliate-link" data-product="mochila" href="#" target="_blank" rel="sponsored noopener">Ver producto</a>
+            </div>
+          </article>
+<article class="product-card" data-tags="equipaje tecnologia internacional imprescindibles" data-category="equipaje">
+            <div class="product-image">
+              <img src="assets/productos/mochila-laptop.webp" alt="Mochila Matein de 40 litros con espacio para laptop de 17 pulgadas" loading="lazy" decoding="async">
+              <span class="badge">Laptop protegida</span>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Equipaje y tecnología</span>
+              <h3>Mochila 40 L con laptop</h3>
+              <div class="rating">Tienda oficial Matein</div>
+              <div class="rating-box"><strong>Diseñada para trabajo y viaje</strong><span>Compartimento para laptop de hasta 17 pulgadas, puerto USB, protección lumbar y mecanismo antirrobo.</span></div>
+              <p><strong>Problema que resuelve:</strong> transporta ropa y equipo de trabajo en una sola mochila de cabina.</p>
+              <ul class="features"><li>Capacidad de 40 litros</li><li>Espacio acolchado para laptop</li><li>Correa para sujetarla a la maleta</li></ul>
+              <p><strong>Recomendado para:</strong> viajes de negocios, nómadas digitales y escapadas.</p>
+              <p><strong>¿Por qué lo elegimos?</strong> Combina equipaje de mano y protección para dispositivos.</p>
+              <a class="button button-primary affiliate-link" data-product="mochilaLaptop" href="#" target="_blank" rel="sponsored noopener">Ver producto</a>
             </div>
           </article>
 <article class="product-card" data-tags="equipaje familia playa" data-category="organizacion">
             <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1581553680321-4fffae59fccd?auto=format&fit=crop&w=900&q=82" alt="Organizadores de equipaje para maleta" loading="lazy" decoding="async">
+              <img src="assets/productos/organizadores.webp" alt="Set impermeable de ocho organizadores para maleta" loading="lazy" decoding="async">
               <span class="badge">Compra inteligente</span>
             </div>
             <div class="product-body">
               <span class="product-category">Organización</span>
               <h3>Organizadores para maleta</h3>
-              <div class="rating" aria-label="Calificación externa 4.6 de 5">★★★★☆ 4.6/5</div>
+              <div class="rating" aria-label="Calificación 4.8 de 5">★★★★★ 4.8/5</div>
               <div class="rating-box">
-                <strong>Calificación de referencia en internet</strong>
-                <span>Organizadores de maleta comparables, valorados con 4.6/5 y miles de opiniones.</span>
+                <strong>Más vendido en su categoría</strong>
+                <span>4.8/5 con más de 2,300 opiniones al momento de la selección.</span>
               </div>
               <p><strong>Problema que resuelve:</strong> evita el desorden dentro de la maleta y reduce el tiempo al empacar y desempacar.</p>
               <ul class="features">
@@ -1915,20 +2002,20 @@
               </ul>
               <p><strong>Recomendado para:</strong> familias, parejas y viajes de más de tres días.</p>
               <p><strong>¿Por qué lo elegimos?</strong> Es uno de los accesorios con mejor relación entre costo y utilidad.</p>
-              <a class="button button-primary affiliate-link" data-product="organizadores" href="#" target="_blank" rel="sponsored noopener">Ver precio en Mercado Libre</a>
+              <a class="button button-primary affiliate-link" data-product="organizadores" href="#" target="_blank" rel="sponsored noopener">Ver producto</a>
             </div>
           </article>
 <article class="product-card" data-tags="equipaje familia imprescindibles" data-category="equipaje">
             <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?auto=format&fit=crop&w=900&q=82" alt="Báscula digital portátil para equipaje" loading="lazy" decoding="async">
+              <img src="assets/productos/bascula.webp" alt="Báscula digital portátil para equipaje de hasta 50 kilogramos" loading="lazy" decoding="async">
             </div>
             <div class="product-body">
               <span class="product-category">Equipaje</span>
               <h3>Báscula digital para equipaje</h3>
-              <div class="rating">Calificación por confirmar</div>
-              <div class="rating-box rating-pending">
-                <strong>Pendiente de publicación final</strong>
-                <span>Se mostrará la nota real de Mercado Libre cuando se elija la báscula específica.</span>
+              <div class="rating" aria-label="Calificación 4.8 de 5">★★★★★ 4.8/5</div>
+              <div class="rating-box">
+                <strong>N.º 1 en básculas de equipaje</strong>
+                <span>Más de 5,000 unidades vendidas y 455 opiniones al momento de la selección.</span>
               </div>
               <p><strong>Problema que resuelve:</strong> ayuda a evitar sobrepeso y cargos inesperados en el aeropuerto.</p>
               <ul class="features">
@@ -1938,20 +2025,20 @@
               </ul>
               <p><strong>Recomendado para:</strong> viajes con equipaje documentado.</p>
               <p><strong>¿Por qué lo elegimos?</strong> Puede pagarse sola al evitar una sola penalización por exceso de peso.</p>
-              <a class="button button-primary affiliate-link" data-product="bascula" href="#" target="_blank" rel="sponsored noopener">Ver precio en Mercado Libre</a>
+              <a class="button button-primary affiliate-link" data-product="bascula" href="#" target="_blank" rel="sponsored noopener">Ver producto</a>
             </div>
           </article>
 <article class="product-card" data-tags="equipaje familia playa" data-category="organizacion">
             <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=900&q=82" alt="Kit de botellas reutilizables para líquidos de viaje" loading="lazy" decoding="async">
+              <img src="assets/productos/kit-liquidos.webp" alt="Kit de 22 contenedores de silicona para líquidos de viaje" loading="lazy" decoding="async">
             </div>
             <div class="product-body">
               <span class="product-category">Organización</span>
               <h3>Kit para líquidos de viaje</h3>
-              <div class="rating">Calificación por confirmar</div>
-              <div class="rating-box rating-pending">
-                <strong>Pendiente de publicación final</strong>
-                <span>Se mostrará la nota real de Mercado Libre cuando se elija el kit para líquidos específico.</span>
+              <div class="rating" aria-label="Calificación 4.9 de 5">★★★★★ 4.9/5</div>
+              <div class="rating-box">
+                <strong>Kit completo de 22 piezas</strong>
+                <span>Más de 1,000 unidades vendidas y vendedor MercadoLíder al momento de la selección.</span>
               </div>
               <p><strong>Problema que resuelve:</strong> evita llevar envases grandes y reduce derrames dentro del equipaje.</p>
               <ul class="features">
@@ -1961,21 +2048,21 @@
               </ul>
               <p><strong>Recomendado para:</strong> viajes cortos, playa y cabina.</p>
               <p><strong>¿Por qué lo elegimos?</strong> Simplifica el equipaje y permite llevar solo lo necesario.</p>
-              <a class="button button-primary affiliate-link" data-product="liquidos" href="#" target="_blank" rel="sponsored noopener">Ver precio en Mercado Libre</a>
+              <a class="button button-primary affiliate-link" data-product="liquidos" href="#" target="_blank" rel="sponsored noopener">Ver producto</a>
             </div>
           </article>
 <article class="product-card" data-tags="tecnologia playa invierno imprescindibles" data-category="tecnologia">
             <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=900&q=82" alt="Batería portátil power bank para viaje" loading="lazy" decoding="async">
+              <img src="assets/productos/power-bank.webp" alt="Power bank de 20,000 mAh con indicador luminoso" loading="lazy" decoding="async">
               <span class="badge">Para todo viaje</span>
             </div>
             <div class="product-body">
               <span class="product-category">Tecnología</span>
-              <h3>Power bank de carga rápida</h3>
-              <div class="rating" aria-label="Calificación externa 4.6 de 5">★★★★☆ 4.6/5</div>
+              <h3>Power bank de 20,000 mAh</h3>
+              <div class="rating">Capacidad real: 20,000 mAh</div>
               <div class="rating-box">
-                <strong>Calificación de referencia en internet</strong>
-                <span>Power bank comparable de 10,000 mAh, valorada con 4.6/5 y más de 71,000 opiniones.</span>
+                <strong>Publicación enlazada por Viajes Casal</strong>
+                <span>Modelo real enlazado de 20,000 mAh con indicador luminoso de carga.</span>
               </div>
               <p><strong>Problema que resuelve:</strong> evita quedarte sin batería cuando necesitas mapas, boletos o asistencia.</p>
               <ul class="features">
@@ -1985,20 +2072,20 @@
               </ul>
               <p><strong>Recomendado para:</strong> cualquier tipo de viaje.</p>
               <p><strong>¿Por qué lo elegimos?</strong> El celular concentra gran parte de tu viaje; mantenerlo activo es una necesidad, no un lujo.</p>
-              <a class="button button-primary affiliate-link" data-product="powerbank" href="#" target="_blank" rel="sponsored noopener">Ver precio en Mercado Libre</a>
+              <a class="button button-primary affiliate-link" data-product="powerbank" href="#" target="_blank" rel="sponsored noopener">Ver producto</a>
             </div>
           </article>
 <article class="product-card" data-tags="tecnologia internacional invierno imprescindibles" data-category="tecnologia">
             <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1620288650879-20db0eb38c05?auto=format&fit=crop&w=900&q=82" alt="Adaptador universal para enchufes internacionales" loading="lazy" decoding="async">
+              <img src="assets/productos/adaptador.webp" alt="Adaptador universal con puertos USB-A y USB-C" loading="lazy" decoding="async">
             </div>
             <div class="product-body">
               <span class="product-category">Tecnología</span>
               <h3>Adaptador universal de viaje</h3>
-              <div class="rating" aria-label="Calificación externa 4.6 de 5">★★★★☆ 4.6/5</div>
+              <div class="rating" aria-label="Calificación 5 de 5">★★★★★ 5.0/5</div>
               <div class="rating-box">
-                <strong>Calificación de referencia en internet</strong>
-                <span>Adaptador universal comparable, valorado con 4.6/5 y más de 1,200 opiniones.</span>
+                <strong>Varios puertos en un solo adaptador</strong>
+                <span>Incluye USB-A y USB-C; vendedor MercadoLíder al momento de la selección.</span>
               </div>
               <p><strong>Problema que resuelve:</strong> evita llegar a otro país y descubrir que tus cargadores no son compatibles.</p>
               <ul class="features">
@@ -2008,20 +2095,20 @@
               </ul>
               <p><strong>Recomendado para:</strong> Europa, Asia y viajes internacionales.</p>
               <p><strong>¿Por qué lo elegimos?</strong> Reduce fricciones desde el primer día del viaje.</p>
-              <a class="button button-primary affiliate-link" data-product="adaptador" href="#" target="_blank" rel="sponsored noopener">Ver precio en Mercado Libre</a>
+              <a class="button button-primary affiliate-link" data-product="adaptador" href="#" target="_blank" rel="sponsored noopener">Ver producto</a>
             </div>
           </article>
 <article class="product-card" data-tags="internacional familia" data-category="seguridad">
             <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1544016768-982d1554f0b9?auto=format&fit=crop&w=900&q=82" alt="Portapasaporte y organizador de documentos de viaje" loading="lazy" decoding="async">
+              <img src="assets/productos/portapasaporte.webp" alt="Portapasaporte y funda protectora RFID" loading="lazy" decoding="async">
             </div>
             <div class="product-body">
               <span class="product-category">Seguridad</span>
               <h3>Portapasaporte RFID</h3>
-              <div class="rating">Calificación por confirmar</div>
+              <div class="rating">Protección RFID</div>
               <div class="rating-box rating-pending">
-                <strong>Pendiente de publicación final</strong>
-                <span>Se mostrará la nota real de Mercado Libre cuando se elija el portapasaporte específico.</span>
+                <strong>Publicación seleccionada</strong>
+                <span>Funda organizadora para pasaporte, documentos y tarjetas. Consulta la calificación vigente en Mercado Libre.</span>
               </div>
               <p><strong>Problema que resuelve:</strong> evita perder tiempo buscando documentos importantes durante el viaje.</p>
               <ul class="features">
@@ -2031,20 +2118,20 @@
               </ul>
               <p><strong>Recomendado para:</strong> viajes internacionales y familias.</p>
               <p><strong>¿Por qué lo elegimos?</strong> Mantiene la documentación crítica en un solo lugar y reduce el estrés.</p>
-              <a class="button button-primary affiliate-link" data-product="portapasaporte" href="#" target="_blank" rel="sponsored noopener">Ver precio en Mercado Libre</a>
+              <a class="button button-primary affiliate-link" data-product="portapasaporte" href="#" target="_blank" rel="sponsored noopener">Ver producto</a>
             </div>
           </article>
 <article class="product-card" data-tags="internacional imprescindibles" data-category="seguridad">
             <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&w=900&q=82" alt="Candado TSA para proteger maleta" loading="lazy" decoding="async">
+              <img src="assets/productos/candado-tsa.webp" alt="Candado TSA rosa con combinación numérica" loading="lazy" decoding="async">
             </div>
             <div class="product-body">
               <span class="product-category">Seguridad</span>
               <h3>Candado TSA</h3>
-              <div class="rating">Calificación por confirmar</div>
-              <div class="rating-box rating-pending">
-                <strong>Pendiente de publicación final</strong>
-                <span>Se mostrará la nota real de Mercado Libre cuando se elija el candado TSA específico.</span>
+              <div class="rating" aria-label="Calificación 4.8 de 5">★★★★★ 4.8/5</div>
+              <div class="rating-box">
+                <strong>Tienda oficial</strong>
+                <span>Combinación reprogramable de cuatro dígitos.</span>
               </div>
               <p><strong>Problema que resuelve:</strong> mejora la seguridad del equipaje sin complicar inspecciones aeroportuarias.</p>
               <ul class="features">
@@ -2054,20 +2141,20 @@
               </ul>
               <p><strong>Recomendado para:</strong> vuelos nacionales e internacionales.</p>
               <p><strong>¿Por qué lo elegimos?</strong> Es económico y añade una capa básica de seguridad.</p>
-              <a class="button button-primary affiliate-link" data-product="candado" href="#" target="_blank" rel="sponsored noopener">Ver precio en Mercado Libre</a>
+              <a class="button button-primary affiliate-link" data-product="candado" href="#" target="_blank" rel="sponsored noopener">Ver producto</a>
             </div>
           </article>
 <article class="product-card" data-tags="invierno" data-category="comodidad">
             <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1520452112805-c6692c840af0?auto=format&fit=crop&w=900&q=82" alt="Almohada cervical para vuelos largos" loading="lazy" decoding="async">
+              <img src="assets/productos/almohada-cervical.webp" alt="Almohada cervical de espuma viscoelástica para viaje" loading="lazy" decoding="async">
             </div>
             <div class="product-body">
               <span class="product-category">Comodidad</span>
               <h3>Almohada cervical de viaje</h3>
-              <div class="rating">Recomendación editorial</div>
+              <div class="rating" aria-label="Calificación 4.8 de 5">★★★★★ 4.8/5</div>
               <div class="rating-box">
-                <strong>Producto destacado en comparativas</strong>
-                <span>Las almohadas cervicales ergonómicas con soporte de cuello y barbilla destacan en pruebas editoriales para vuelos largos.</span>
+                <strong>Más de 10,000 unidades vendidas</strong>
+                <span>Espuma viscoelástica y más de 1,700 opiniones al momento de la selección.</span>
               </div>
               <p><strong>Problema que resuelve:</strong> reduce molestias en cuello y espalda durante trayectos largos.</p>
               <ul class="features">
@@ -2077,10 +2164,12 @@
               </ul>
               <p><strong>Recomendado para:</strong> vuelos largos, autobús y carretera.</p>
               <p><strong>¿Por qué lo elegimos?</strong> Mejora la comodidad cuando el tiempo de traslado es parte importante del viaje.</p>
-              <a class="button button-primary affiliate-link" data-product="almohada" href="#" target="_blank" rel="sponsored noopener">Ver precio en Mercado Libre</a>
+              <a class="button button-primary affiliate-link" data-product="almohada" href="#" target="_blank" rel="sponsored noopener">Ver producto</a>
             </div>
           </article>
           </div>
+
+          <p class="search-empty" id="productSearchEmpty">No encontramos ese producto. Prueba con mochila, equipaje, seguridad o tecnología.</p>
 
           <div class="carousel-controls" aria-label="Navegación del catálogo">
             <button class="carousel-btn" id="dynamicPrev" type="button" aria-label="Ver productos anteriores">←</button>
@@ -2337,15 +2426,16 @@
     const EMAIL_MARKETING_ENDPOINT = "";
 
     const affiliateLinks = {
-      mochila: "#",
-      organizadores: "#",
-      powerbank: "#",
-      adaptador: "#",
-      candado: "#",
-      bascula: "#",
-      portapasaporte: "#",
-      almohada: "#",
-      liquidos: "#"
+      mochila: "https://meli.la/1TENXjY",
+      mochilaLaptop: "https://meli.la/22csBNE",
+      organizadores: "https://meli.la/1ZY6E6j",
+      powerbank: "https://meli.la/297Tw3x",
+      adaptador: "https://meli.la/1N89WcZ",
+      candado: "https://meli.la/2D4VP1W",
+      bascula: "https://meli.la/1p7jKiM",
+      portapasaporte: "https://meli.la/2X2Btta",
+      almohada: "https://meli.la/2aELj7E",
+      liquidos: "https://meli.la/2KTiWgg"
     };
 
     document.querySelectorAll(".affiliate-link").forEach(link => {
@@ -2366,12 +2456,23 @@
       ? Array.from(dynamicCarousel.querySelectorAll(".product-card"))
       : [];
 
+    let activeProductCategory = "all";
+    let activeProductQuery = "";
+    const normalizeSearch = value => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+
     function applyCategoryFilter(category) {
+      activeProductCategory = category;
+      let visibleCount = 0;
       dynamicCards.forEach(card => {
         const tags = (card.dataset.tags || "").split(" ").filter(Boolean);
-        const visible = category === "all" || tags.includes(category);
+        const matchesCategory = category === "all" || tags.includes(category);
+        const matchesQuery = !activeProductQuery || normalizeSearch(card.textContent).includes(activeProductQuery);
+        const visible = matchesCategory && matchesQuery;
         card.classList.toggle("is-hidden", !visible);
+        if (visible) visibleCount += 1;
       });
+
+      document.getElementById("productSearchEmpty")?.classList.toggle("is-visible", visibleCount === 0);
 
       if (dynamicCarousel) {
         dynamicCarousel.scrollTo({ left: 0, behavior: "smooth" });
@@ -2384,6 +2485,26 @@
         button.classList.add("active");
         applyCategoryFilter(button.dataset.categoryFilter);
       });
+    });
+
+    const productSearch = document.getElementById("productSearch");
+    const productSearchToggle = productSearch?.querySelector(".context-search-toggle");
+    const productSearchInput = document.getElementById("productSearchInput");
+    productSearchToggle?.addEventListener("click", () => {
+      productSearch.classList.add("is-open");
+      productSearchToggle.setAttribute("aria-expanded", "true");
+      productSearchInput?.focus();
+    });
+    productSearch?.querySelector(".context-search-close")?.addEventListener("click", () => {
+      activeProductQuery = "";
+      if (productSearchInput) productSearchInput.value = "";
+      productSearch.classList.remove("is-open");
+      productSearchToggle?.setAttribute("aria-expanded", "false");
+      applyCategoryFilter(activeProductCategory);
+    });
+    productSearchInput?.addEventListener("input", () => {
+      activeProductQuery = normalizeSearch(productSearchInput.value);
+      applyCategoryFilter(activeProductCategory);
     });
 
     function scrollOneCard(container, direction, gap) {
@@ -2636,7 +2757,7 @@
           product: "mochila",
           title: "Mochila de cabina 40 L",
           description: "La opción más versátil para comenzar y reducir la necesidad de documentar equipaje.",
-          image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=82",
+          image: "assets/productos/mochila-cabina.webp",
           badge: "Mejor opción general",
           winner: true,
           scores: [
@@ -2648,9 +2769,9 @@
         },
         {
           product: "powerbank",
-          title: "Power bank",
+          title: "Power bank 20,000 mAh",
           description: "Mantiene disponible el celular para mapas, boletos, reservas y emergencias.",
-          image: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=900&q=82",
+          image: "assets/productos/power-bank.webp",
           badge: "Esencial digital",
           winner: false,
           scores: [
@@ -2664,7 +2785,7 @@
           product: "organizadores",
           title: "Organizadores de maleta",
           description: "Mejoran el orden y ayudan a aprovechar el espacio desde el primer viaje.",
-          image: "https://images.unsplash.com/photo-1581553680321-4fffae59fccd?auto=format&fit=crop&w=900&q=82",
+          image: "assets/productos/organizadores.webp",
           badge: "Mejor valor",
           winner: false,
           scores: [
@@ -2680,7 +2801,7 @@
           product: "adaptador",
           title: "Adaptador universal",
           description: "Evita incompatibilidades eléctricas en hoteles, aeropuertos y alojamientos.",
-          image: "https://images.unsplash.com/photo-1620288650879-20db0eb38c05?auto=format&fit=crop&w=900&q=82",
+          image: "assets/productos/adaptador.webp",
           badge: "Imprescindible internacional",
           winner: true,
           scores: [
@@ -2694,7 +2815,7 @@
           product: "portapasaporte",
           title: "Portapasaporte RFID",
           description: "Mantiene documentos y tarjetas importantes en un solo lugar.",
-          image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=82",
+          image: "assets/productos/portapasaporte.webp",
           badge: "Documentación segura",
           winner: false,
           scores: [
@@ -2708,7 +2829,7 @@
           product: "candado",
           title: "Candado TSA",
           description: "Añade una capa básica de seguridad al equipaje documentado.",
-          image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=82",
+          image: "assets/productos/candado-tsa.webp",
           badge: "Seguridad",
           winner: false,
           scores: [
@@ -2724,7 +2845,7 @@
           product: "almohada",
           title: "Almohada cervical",
           description: "Mejora el descanso y reduce molestias durante trayectos prolongados.",
-          image: "https://images.unsplash.com/photo-1520452112805-c6692c840af0?auto=format&fit=crop&w=900&q=82",
+          image: "assets/productos/almohada-cervical.webp",
           badge: "Mayor comodidad",
           winner: true,
           scores: [
@@ -2736,9 +2857,9 @@
         },
         {
           product: "powerbank",
-          title: "Power bank",
+          title: "Power bank 20,000 mAh",
           description: "Permite mantener activos dispositivos durante escalas y vuelos extensos.",
-          image: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=900&q=82",
+          image: "assets/productos/power-bank.webp",
           badge: "Conectividad",
           winner: false,
           scores: [
@@ -2768,7 +2889,7 @@
           product: "organizadores",
           title: "Organizadores de maleta",
           description: "Permiten separar ropa, accesorios y artículos de cada integrante.",
-          image: "https://images.unsplash.com/photo-1581553680321-4fffae59fccd?auto=format&fit=crop&w=900&q=82",
+          image: "assets/productos/organizadores.webp",
           badge: "Mejor para familias",
           winner: true,
           scores: [
@@ -2782,7 +2903,7 @@
           product: "bascula",
           title: "Báscula de equipaje",
           description: "Ayuda a distribuir mejor el peso y evitar cargos por exceso.",
-          image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=82",
+          image: "assets/productos/bascula.webp",
           badge: "Ahorro potencial",
           winner: false,
           scores: [
@@ -2796,7 +2917,7 @@
           product: "liquidos",
           title: "Kit para líquidos",
           description: "Facilita repartir productos de higiene sin cargar envases completos.",
-          image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=900&q=82",
+          image: "assets/productos/kit-liquidos.webp",
           badge: "Práctico",
           winner: false,
           scores: [
@@ -2870,6 +2991,22 @@
     });
 
     renderCompareScenario("primer-viaje");
+
+    // Profundidad interactiva estilo mini-short, sin el peso de un archivo de video.
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.addEventListener("pointermove", event => {
+        const card = event.target.closest(".favorite-card, .product-card, .compare-card");
+        if (!card) return;
+        const rect = card.getBoundingClientRect();
+        const rotateY = ((event.clientX - rect.left) / rect.width - .5) * 7;
+        const rotateX = -((event.clientY - rect.top) / rect.height - .5) * 7;
+        card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+      });
+      document.addEventListener("pointerout", event => {
+        const card = event.target.closest(".favorite-card, .product-card, .compare-card");
+        if (card && !card.contains(event.relatedTarget)) card.style.transform = "";
+      });
+    }
 
     
 const aState={step:1,answers:{tripType:null,days:null,plane:null,checkedBag:null}};
